@@ -1,30 +1,40 @@
-li s0, 0x100 # array starting at s0x100, s0x104, s0x108 ....
-li t0, 0 # index count
-li s1, 5
+# Set up array values
+li x10, 0x100
+li x11, 6
+li x5, 10
+li x28, 4
 
-LOOP:
-beq t0, s1, End # index == len
-slli t2, t0, 2 # offset = index * 4
-add t3, s0, t2  # base index + offset 
-sw t0, 0(t3)  # value at index into list at address t3
-addi t0, t0, 1 # increment
-j LOOP
+# Calculate offset and store values
+slli x6, x11, 2
+add x7, x10, x6
+sw x5, 0(x7)
+addi x7, x7, 4
+sw x28, 0(x7)
+jal x1, swap
+j exit
 
-End:
-li s2, 2
-jal ra, swap
-j end
-
-
-
+# Swap array elements
 swap:
-    slli t2, s2, 2
-    add t3, s0, t2
-    lw t5, 0(t3)
-    lw t6, 0(s0)
-    sw t6, 0(t3)
-    sw t5, 0(s0)
-    jalr x0, 0(x1) 
+    # Setup stack
+    li x2, 0x200
+    addi x2, x2, -16
+    lw x18, 0(x2)
+    # Calculate indices
+    slli x19, x11, 2
+    add x10, x19, x10
+    # Load values
+    lw x18, 0(x10)
+    addi x20, x10, 4
+    lw x21, 0(x20)
+    # Perform swap
+    sw x21, 0(x10)
+    sw x18, 0(x20)
+    # Save to stack
+    sw x18, 0(x2)
+    sw x19, 4(x2)
+    sw x20, 8(x2)
+    sw x21, 12(x2)
+    addi x2, x2, 16
+    jalr x0, 0(x1)
 
-
-end:
+exit:
