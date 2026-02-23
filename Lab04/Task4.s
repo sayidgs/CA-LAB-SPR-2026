@@ -1,23 +1,28 @@
-# Initialize registers for geometric series
-li x1, 7            # x1 = n (number of terms = 7)
-li x4, 1            # x4 = current term (starts at 1)
-li x3, 3            # x3 = common ratio (3)
+#No. of terms
+li x1, 7
+#1st term
+li x4, 1
+#Comomnt ratio
+li x3, 3
+#Sum 
+li x5, 0
 
-# Main loop: generate and store series terms
-loop: 
-    beq x1, x0, end     # if n == 0, exit loop
+loop:
+    # Check if n == 0, then exit loop
+    beq x1, x0, end
     
-    # Store current term on stack
-    addi sp, sp, -4     # allocate 4 bytes on stack
-    sw x4, 0(sp)        # push current term onto stack
+    #Add in sum
+    add x5, x5, x4
+    # Allocate 4 bytes on stack for storing
+    addi sp, sp, -4
+    # Push on stack
+    sw x4, 0(sp)
     
-    # Calculate next term by multiplying by ratio
-    mul x4, x4, x3      # current_term = current_term * common_ratio
-    
-    # Decrement counter and continue
-    addi x1, x1, -1     # n--
-    j loop              # continue loop
+    #Calc next term
+    mul x4, x4, x3
+    # Decrement counter
+    addi x1, x1, -1
+    j loop
 
-# Program end
-end: 
-    j end               # infinite loop (halt) 
+end:
+    j end
