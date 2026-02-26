@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Feb 26 10:43:09 2026
+# Process ID: 4448
+# Current directory: C:/Users/gs10403/Downloads/New folder/Lab06-CA_task3/Lab06-CA_task3.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/gs10403/Downloads/New folder/Lab06-CA_task3/Lab06-CA_task3.sim/sim_1/behav/xsim/xsim.dir/ALU_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/gs10403/Downloads/New folder/Lab06-CA_task3/Lab06-CA_task3.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/gs10403/Downloads/New folder/Lab06-CA_task3/Lab06-CA_task3.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/gs10403/Downloads/New -notrace
+couldn't read file "C:/Users/gs10403/Downloads/New": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Thu Feb 26 10:43:09 2026...
