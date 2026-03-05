@@ -15,7 +15,6 @@ ALU uut (
     .ALUResult(ALUResult),
     .Zero(Zero)
 );
-
 initial begin
 
     // Generate waveform file
