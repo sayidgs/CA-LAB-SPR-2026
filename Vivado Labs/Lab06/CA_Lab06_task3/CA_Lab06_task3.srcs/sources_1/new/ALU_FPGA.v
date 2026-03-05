@@ -18,8 +18,8 @@ assign ALUControl = switches[3:0];   // lower switches select operation
 
 // Fixed operands
 always @(posedge clk) begin
-    A <= 32'h10101010;
-    B <= 32'h01010101;
+    A <= 32'h00000008; // 8 -> 01000
+    B <= 32'h00000005; // 5 -> 00101
 end
 
 // ALU instance

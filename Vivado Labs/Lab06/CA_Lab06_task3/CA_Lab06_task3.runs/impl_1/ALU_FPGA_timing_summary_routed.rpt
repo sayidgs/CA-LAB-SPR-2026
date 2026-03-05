@@ -1,12 +1,12 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Thu Mar  5 07:29:49 2026
-| Host         : DESKTOP-1MEKRSF running 64-bit major release  (build 9200)
+| Date         : Thu Mar  5 10:00:04 2026
+| Host         : HU-DOPX-ML30 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file ALU_FPGA_timing_summary_routed.rpt -pb ALU_FPGA_timing_summary_routed.pb -rpx ALU_FPGA_timing_summary_routed.rpx -warn_on_violation
 | Design       : ALU_FPGA
-| Device       : 7k70t-fbv676
-| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Timing Summary Report
@@ -131,13 +131,17 @@ Table of Contents
          NA           NA                     NA                   NA           NA           NA                     NA                   NA           NA           NA                      NA                    NA  
 
 
-There are no user specified timing constraints.
+All user specified timing constraints are met.
 
 
 ------------------------------------------------------------------------------------------------
 | Clock Summary
 | -------------
 ------------------------------------------------------------------------------------------------
+
+Clock    Waveform(ns)       Period(ns)      Frequency(MHz)
+-----    ------------       ----------      --------------
+sys_clk  {0.000 5.000}      10.000          100.000         
 
 
 ------------------------------------------------------------------------------------------------

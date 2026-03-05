@@ -1,11 +1,11 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Thu Mar  5 07:29:32 2026
-| Host         : DESKTOP-1MEKRSF running 64-bit major release  (build 9200)
+| Date         : Thu Mar  5 09:59:54 2026
+| Host         : HU-DOPX-ML30 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file ALU_FPGA_control_sets_placed.rpt
 | Design       : ALU_FPGA
-| Device       : xc7k70t
+| Device       : xc7a35t
 -------------------------------------------------------------------------------------
 
 Control Set Information

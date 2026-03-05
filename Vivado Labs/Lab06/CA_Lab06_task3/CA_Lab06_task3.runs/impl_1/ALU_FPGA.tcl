@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.runs/impl_1/ALU_FPGA.tcl"
+  variable script "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.runs/impl_1/ALU_FPGA.tcl"
   variable category "vivado_impl"
 }
 
@@ -114,8 +114,7 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "Implementation" START { ROLLUP_1 }
 OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
@@ -125,9 +124,9 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 2
-  set_param synth.incrementalSynthesisCache C:/Users/ghazi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-17108-DESKTOP-1MEKRSF/incrSyn
+  set_param xicom.use_bs_reader 1
   open_checkpoint ALU_FPGA_routed.dcp
-  set_property webtalk.parent_dir {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.cache/wt} [current_project]
+  set_property webtalk.parent_dir {C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.cache/wt} [current_project]
 set_property TOP ALU_FPGA [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.runs/synth_1/ALU_FPGA.tcl"
+  variable script "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.runs/synth_1/ALU_FPGA.tcl"
   variable category "vivado_synth"
 }
 
@@ -71,23 +71,25 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xc7k70tfbv676-1
+create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.xpr} [current_project]
+set_property webtalk.parent_dir {C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {c:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.cache/ip} [current_project]
+set_property ip_output_repo {c:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v}
-  {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.srcs/sources_1/new/ALU_FPGA.v}
+  {C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v}
+  {C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.srcs/sources_1/new/ALU_FPGA.v}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -98,14 +100,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.srcs/constrs_1/new/const.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.srcs/constrs_1/new/const.xdc}}]
+read_xdc {{C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.srcs/constrs_1/new/const.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.srcs/constrs_1/new/const.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top ALU_FPGA -part xc7k70tfbv676-1
+synth_design -top ALU_FPGA -part xc7a35tcpg236-1
 OPTRACE "synth_design" END { }
 
 
