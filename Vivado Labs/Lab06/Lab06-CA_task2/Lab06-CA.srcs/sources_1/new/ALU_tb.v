@@ -1,54 +1,85 @@
-`timescale 1ns/1ps
+`timescale 1ns / 1ps
 
 module ALU_tb;
 
-reg  [31:0] A, B;
+reg  [31:0] A;
+reg  [31:0] B;
 reg  [3:0]  ALUControl;
-wire [31:0] ALUResult;
+
+wire [31:0] Result;
 wire Zero;
 
 // Instantiate ALU
-ALU uut (
+ALU_32bit uut (
     .A(A),
     .B(B),
     .ALUControl(ALUControl),
-    .ALUResult(ALUResult),
+    .Result(Result),
     .Zero(Zero)
 );
+
 initial begin
 
-    // Generate waveform file
+    // waveform generation
     $dumpfile("ALU_waveform.vcd");
     $dumpvars(0, ALU_tb);
 
-    // Test ADD
-    A = 1; B = 1; ALUControl = 4'b0000; #10;
-    
-    // Test SUB
-    A = 10; B = 1; ALUControl = 4'b0001; #10;
+    // ADD
+    A = 32'd10;
+    B = 32'd5;
+    ALUControl = 4'b0000;
+    #10;
 
-    // Test AND
-    A = 8'hFF; B = 8'h00; ALUControl = 4'b0010; #10;
+    // SUB
+    A = 32'd10;
+    B = 32'd5;
+    ALUControl = 4'b0001;
+    #10;
 
-    // Test OR
-    A = 8'hFA; B = 8'h00; ALUControl = 4'b0011; #10;
+    // AND
+    A = 32'hFF00FF00;
+    B = 32'h0F0F0F0F;
+    ALUControl = 4'b0010;
+    #10;
 
-    // Test XOR
-    A = 8'hAA; B = 8'hFF; ALUControl = 4'b0100; #10;
+    // OR
+    A = 32'hAA55AA55;
+    B = 32'h00FF00FF;
+    ALUControl = 4'b0011;
+    #10;
 
-    // Test SLL
-    A = 10; B = 2; ALUControl = 4'b0101; #10;
+    // XOR
+    A = 32'hAAAAAAAA;
+    B = 32'hFFFFFFFF;
+    ALUControl = 4'b0100;
+    #10;
 
-    // Test SRL
-    A = 21; B = 3; ALUControl = 4'b0110; #10;
+    // SLL
+    A = 32'd4;
+    B = 32'd2;
+    ALUControl = 4'b0101;
+    #10;
 
-    // Test SLT
-    A = 10; B = 5; ALUControl = 4'b0111; #10;
+    // SRL
+    A = 32'd32;
+    B = 32'd2;
+    ALUControl = 4'b0110;
+    #10;
 
-    // Test Zero flag
-    A = 1; B = 5; ALUControl = 4'b0001; #10;
+    // SLT (A < B)
+    A = 32'd5;
+    B = 32'd10;
+    ALUControl = 4'b0111;
+    #10;
+
+    // Zero flag test
+    A = 32'd5;
+    B = 32'd5;
+    ALUControl = 4'b0001;
+    #10;
 
     $finish;
+
 end
 
 endmodule

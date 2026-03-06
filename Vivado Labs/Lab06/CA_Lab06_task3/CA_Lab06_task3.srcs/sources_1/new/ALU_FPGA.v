@@ -23,11 +23,11 @@ always @(posedge clk) begin
 end
 
 // ALU instance
-ALU alu_inst(
+ALU_32bit alu_inst(
     .A(A),
     .B(B),
     .ALUControl(ALUControl),
-    .ALUResult(ALUResult),
+    .Result(ALUResult),
     .Zero(Zero)
 );
 
