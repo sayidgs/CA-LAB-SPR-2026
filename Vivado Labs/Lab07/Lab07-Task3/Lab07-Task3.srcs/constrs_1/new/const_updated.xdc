@@ -2,10 +2,15 @@
 set_property PACKAGE_PIN W5 [get_ports clk]
 set_property IOSTANDARD LVCMOS33 [get_ports clk]
 create_clock -period 10.0 [get_ports clk]
+#create_clock -period 10.000 -name sys_clk [get_ports clk]
+#set_property PACKAGE_PIN W5 [get_ports clk]
+#set_property IOSTANDARD LVCMOS33 [get_ports clk]
+
+
 
 ## Reset Button (BTNC)
-set_property PACKAGE_PIN U18 [get_ports rst]
-set_property IOSTANDARD LVCMOS33 [get_ports rst]
+set_property PACKAGE_PIN U18 [get_ports reset]
+set_property IOSTANDARD LVCMOS33 [get_ports reset]
 
 ## Start Button (BTNU)
 set_property PACKAGE_PIN T18 [get_ports start]
@@ -62,28 +67,28 @@ set_property IOSTANDARD LVCMOS33 [get_ports {leds[10]}]
 set_property PACKAGE_PIN U3 [get_ports {leds[11]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {leds[11]}]
 
-set_property PACKAGE_PIN P3 [get_ports {leds[12]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {leds[12]}]
+#set_property PACKAGE_PIN P3 [get_ports {leds[12]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {leds[12]}]
 
-set_property PACKAGE_PIN N3 [get_ports {leds[13]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {leds[13]}]
+#set_property PACKAGE_PIN N3 [get_ports {leds[13]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {leds[13]}]
 
-set_property PACKAGE_PIN P1 [get_ports {leds[14]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {leds[14]}]
+#set_property PACKAGE_PIN P1 [get_ports {leds[14]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {leds[14]}]
 
-set_property PACKAGE_PIN L1 [get_ports {leds[15]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {leds[15]}]
+#set_property PACKAGE_PIN L1 [get_ports {leds[15]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {leds[15]}]
 
 
 ## FSM State LEDs
-set_property PACKAGE_PIN U16 [get_ports {state_led[0]}]
+set_property PACKAGE_PIN P3 [get_ports {state_led[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {state_led[0]}]
 
-set_property PACKAGE_PIN E19 [get_ports {state_led[1]}]
+set_property PACKAGE_PIN N3 [get_ports {state_led[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {state_led[1]}]
 
-set_property PACKAGE_PIN U19 [get_ports {state_led[2]}]
+set_property PACKAGE_PIN P1 [get_ports {state_led[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {state_led[2]}]
 
-set_property PACKAGE_PIN V19 [get_ports {state_led[3]}]
+set_property PACKAGE_PIN L1 [get_ports {state_led[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {state_led[3]}]

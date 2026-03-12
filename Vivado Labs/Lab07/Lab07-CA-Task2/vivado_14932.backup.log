@@ -1,0 +1,320 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Mar 12 11:22:07 2026
+# Process ID: 14932
+# Current directory: C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13684 C:\Users\gs10403\CA-LAB-SPR-2026\Vivado Labs\Lab07\Lab07-CA-Task2\Lab07-CA-Task2.xpr
+# Log file: C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/vivado.log
+# Journal file: C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_32bit' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj ALU_32bit_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module full_adder
+INFO: [VRFC 10-311] analyzing module ALU_1bit
+INFO: [VRFC 10-311] analyzing module ALU_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim'
+"xelab -wto 24c0941178ee45f8886f8201e0901bcd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALU_32bit_behav xil_defaultlib.ALU_32bit xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 24c0941178ee45f8886f8201e0901bcd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALU_32bit_behav xil_defaultlib.ALU_32bit xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.full_adder
+Compiling module xil_defaultlib.ALU_1bit
+Compiling module xil_defaultlib.ALU_32bit
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ALU_32bit_behav
+
+****** Webtalk v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/gs10403/CA-LAB-SPR-2026/Vivado -notrace
+invalid command name "%"
+    while executing
+"% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+    (file "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado" line 1)
+INFO: [Common 17-206] Exiting Webtalk at Thu Mar 12 11:22:46 2026...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ALU_32bit_behav -key {Behavioral:sim_1:Functional:ALU_32bit} -tclbatch {ALU_32bit.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source ALU_32bit.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ALU_32bit_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1024.492 ; gain = 0.000
+set_property top RegisterFile_tb [current_fileset]
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_32bit' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj ALU_32bit_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim'
+"xelab -wto 24c0941178ee45f8886f8201e0901bcd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALU_32bit_behav xil_defaultlib.ALU_32bit xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 24c0941178ee45f8886f8201e0901bcd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALU_32bit_behav xil_defaultlib.ALU_32bit xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ALU_32bit_behav -key {Behavioral:sim_1:Functional:ALU_32bit} -tclbatch {ALU_32bit.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source ALU_32bit.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ALU_32bit_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/simulate.log"
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'RF_ALU_FSM_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj RF_ALU_FSM_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.srcs/sources_1/new/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.srcs/sources_1/new/ALU_FSM_Reg_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RF_ALU_FSM_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim'
+"xelab -wto 24c0941178ee45f8886f8201e0901bcd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot RF_ALU_FSM_tb_behav xil_defaultlib.RF_ALU_FSM_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 24c0941178ee45f8886f8201e0901bcd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot RF_ALU_FSM_tb_behav xil_defaultlib.RF_ALU_FSM_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 82. Module ALU_32bit_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 82. Module ALU_32bit_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 40. Module ALU_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v" Line 27. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+INFO: [Common 17-14] Message 'XSIM 43-4099' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.full_adder
+Compiling module xil_defaultlib.ALU_1bit
+Compiling module xil_defaultlib.ALU_32bit_default
+Compiling module xil_defaultlib.RF_ALU_FSM_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot RF_ALU_FSM_tb_behav
+
+****** Webtalk v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/gs10403/CA-LAB-SPR-2026/Vivado -notrace
+invalid command name "%"
+    while executing
+"% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+    (file "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado" line 1)
+INFO: [Common 17-206] Exiting Webtalk at Thu Mar 12 11:25:05 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1024.492 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1024.492 ; gain = 0.000
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1024.492 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/simulate.log"
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/ALU_32bit_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/xsim.dir/ALU_32bit_behav/xsim.xdbg
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/xsim.dir/ALU_32bit_behav/xsimcrash.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/xsim.dir/ALU_32bit_behav/xsimk.exe
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/xsim.dir/ALU_32bit_behav/xsimkernel.log
+WARNING: [Vivado 12-4421] Failed to remove directory:C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/xsim.dir/ALU_32bit_behav
+WARNING: [Vivado 12-4421] Failed to remove directory:C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/xsim.dir
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 12 11:25:30 2026...

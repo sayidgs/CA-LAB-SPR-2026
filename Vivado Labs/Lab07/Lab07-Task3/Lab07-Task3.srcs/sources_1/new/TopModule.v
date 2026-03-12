@@ -25,12 +25,12 @@
 module top_rf_alu(
 
     input clk,
-    input rst,
+    input reset,
 
     input [3:0] switches,        // ALU operation select
     input start,           // start FSM
 
-    output [15:0] leds,     // result display
+    output [11:0] leds,     // result display
     output [3:0] state_led // FSM state
 );
 
@@ -75,7 +75,7 @@ RegisterFile RF(
 ALU_32bit ALU(
     .A(ReadData1),
     .B(ReadData2),
-    .ALUControl(sw),
+    .ALUControl(switches),
     .Result(ALUResult),
     .Zero(Zero)
 );
@@ -92,89 +92,119 @@ parameter WRITE_B = 2;
 parameter EXECUTE = 3;
 parameter STORE = 4;
 
+
 always @(posedge clk or posedge reset)
 begin
-
-if(reset)
-begin
-    state <= IDLE;
-    WriteEnable <= 0;
-end
-
-else
-
-case(state)
-
-/////////////////////////////////////////////////
-// IDLE
-/////////////////////////////////////////////////
-
-IDLE:
-begin
-    WriteEnable <= 0;
-    if(start)
-        state <= WRITE_A;
-end
-
-/////////////////////////////////////////////////
-// WRITE CONSTANT A
-/////////////////////////////////////////////////
-
-WRITE_A:
-begin
-    WriteEnable <= 1;
-    rd <= 5'd1;
-    WriteData <= 32'h10101010;
-    state <= WRITE_B;
-end
-
-/////////////////////////////////////////////////
-// WRITE CONSTANT B
-/////////////////////////////////////////////////
-
-WRITE_B:
-begin
-    rd <= 5'd2;
-    WriteData <= 32'h01010101;
-    state <= EXECUTE;
-end
-
-/////////////////////////////////////////////////
-// EXECUTE ALU
-/////////////////////////////////////////////////
-
-EXECUTE:
-begin
-    WriteEnable <= 0;
-
-    rs1 <= 5'd1;
-    rs2 <= 5'd2;
-
-    state <= STORE;
-end
-
-/////////////////////////////////////////////////
-// STORE RESULT
-/////////////////////////////////////////////////
-
-STORE:
-begin
-    WriteEnable <= 1;
-    rd <= 5'd3;
-    WriteData <= ALUResult;
-
-    state <= EXECUTE; // repeat operations
-end
-
-endcase
-
-end
-
-/////////////////////////////////////////////////
-// LED OUTPUT
-/////////////////////////////////////////////////
-
-assign led = ALUResult[15:0];
-assign state_led = state;
-
+    
+//    if(reset)
+//    begin
+//        state<=0;
+//        rs1<=0;
+//        rs2<=0;
+//    end 
+//    else
+//    begin
+//        case(state)
+        
+//        0: begin
+//            if(start)
+//                state<=1;
+//            end
+//       1: begin
+//            rs1<=32'h10101010;
+//            state<=2;
+//            end
+//       2: begin
+//            rs2<=32'h01010101;
+//            state<=3;
+//            end
+//       3: begin
+//           state<=3;
+//          end
+//       default: state<=0;
+//       endcase   
+//    end       
+//end       
+    if(reset)
+    begin
+        state <= IDLE;
+        WriteEnable <= 0;
+    end
+    
+    else
+    
+    case(state)
+    
+    /////////////////////////////////////////////////
+    // IDLE
+    /////////////////////////////////////////////////
+    
+    IDLE:
+    begin
+        WriteEnable <= 0;
+        if(start)
+            state <= WRITE_A;
+    end
+    
+    /////////////////////////////////////////////////
+    // WRITE CONSTANT A
+    /////////////////////////////////////////////////
+    
+    WRITE_A:
+    begin
+        WriteEnable <= 1;
+        rd <= 5'd1;
+        WriteData <= 32'h00000010;
+        state <= WRITE_B;
+    end
+    
+    /////////////////////////////////////////////////
+    // WRITE CONSTANT B
+    /////////////////////////////////////////////////
+    
+    WRITE_B:
+    begin
+        rd <= 5'd2;
+        WriteData <= 32'h00000001;
+        state <= EXECUTE;
+    end
+    
+    /////////////////////////////////////////////////
+    // EXECUTE ALU
+    /////////////////////////////////////////////////
+    
+    EXECUTE:
+    begin
+        WriteEnable <= 0;
+    
+        rs1 <= 5'd1;
+        rs2 <= 5'd2;
+    
+        state <= STORE;
+    end
+    
+    /////////////////////////////////////////////////
+    // STORE RESULT
+    /////////////////////////////////////////////////
+    
+    STORE:
+    begin
+        WriteEnable <= 1;
+        rd <= 5'd3;
+        WriteData <= ALUResult;
+    
+        state <= EXECUTE; // repeat operations
+    end
+    
+    endcase
+    
+    end
+    
+    /////////////////////////////////////////////////
+    // LED OUTPUT
+    /////////////////////////////////////////////////
+    
+    assign leds = ALUResult[11:0];
+    assign state_led = state;
+    
 endmodule
