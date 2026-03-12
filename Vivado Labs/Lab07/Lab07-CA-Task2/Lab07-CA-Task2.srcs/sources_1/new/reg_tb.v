@@ -27,70 +27,103 @@ RegisterFile uut(
     .ReadData2(ReadData2)
 );
 
-// Clock generation
 always #5 clk = ~clk;
 
 initial begin
 
-    $dumpfile("RegisterFile.vcd");
-    $dumpvars(0, RegisterFile_tb);
+clk = 0;
+reset = 1;
+WriteEnable = 0;
 
-    clk = 0;
-    reset = 1;
-    WriteEnable = 0;
+#10 reset = 0;
 
-    #10 reset = 0;
+////////////////////////////////////////////////
+// Test 1: Write to register x5
+////////////////////////////////////////////////
 
-    // Test 1: Write to x5
-    rd = 5;
-    WriteData = 32'hDEADBEEF;
-    WriteEnable = 1;
-    #10;
+WriteEnable = 1;
+rd = 5;
+WriteData = 32'hDEADBEEF;
 
-    WriteEnable = 0;
-    rs1 = 5;
-    #10;
+#10;
 
-    // Test 2: Attempt write to x0
-    rd = 0;
-    WriteData = 32'hFFFFFFFF;
-    WriteEnable = 1;
-    #10;
+rs1 = 5;
+rs2 = 0;
 
-    WriteEnable = 0;
-    rs1 = 0;
-    #10;
+#10;
 
-    // Test 3: Two simultaneous reads
-    rd = 6;
-    WriteData = 32'hAAAA5555;
-    WriteEnable = 1;
-    #10;
+$display("Read x5 = %h", ReadData1);
 
-    WriteEnable = 0;
-    rs1 = 5;
-    rs2 = 6;
-    #10;
+////////////////////////////////////////////////
+// Test 2: Write to x0 (should stay zero)
+////////////////////////////////////////////////
 
-    // Test 4: Overwrite register
-    rd = 5;
-    WriteData = 32'h12345678;
-    WriteEnable = 1;
-    #10;
+rd = 0;
+WriteData = 32'hFFFFFFFF;
 
-    WriteEnable = 0;
-    rs1 = 5;
-    #10;
+#10;
 
-    // Test 5: Reset behavior
-    reset = 1;
-    #10;
-    reset = 0;
+rs1 = 0;
 
-    rs1 = 5;
-    #10;
+#10;
 
-    $finish;
+$display("Read x0 = %h (should be 0)", ReadData1);
+
+////////////////////////////////////////////////
+// Test 3: Two simultaneous reads
+////////////////////////////////////////////////
+
+rd = 10;
+WriteData = 32'h12345678;
+#10;
+
+rd = 11;
+WriteData = 32'h87654321;
+#10;
+
+WriteEnable = 0;
+
+rs1 = 10;
+rs2 = 11;
+
+#10;
+
+$display("Read x10 = %h", ReadData1);
+$display("Read x11 = %h", ReadData2);
+
+////////////////////////////////////////////////
+// Test 4: Overwrite register
+////////////////////////////////////////////////
+
+WriteEnable = 1;
+rd = 5;
+WriteData = 32'hAAAAAAAA;
+
+#10;
+
+WriteEnable = 0;
+rs1 = 5;
+
+#10;
+
+$display("Overwrite x5 = %h", ReadData1);
+
+////////////////////////////////////////////////
+// Test 5: Reset behavior
+////////////////////////////////////////////////
+
+reset = 1;
+#10;
+reset = 0;
+
+rs1 = 5;
+
+#10;
+
+$display("After reset x5 = %h", ReadData1);
+
+#20 $finish;
+
 end
 
 endmodule

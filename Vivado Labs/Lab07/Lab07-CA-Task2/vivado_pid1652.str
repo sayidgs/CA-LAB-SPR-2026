@@ -1,0 +1,574 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 1652
+License: Customer
+
+Current time: 	Thu Mar 12 08:58:15 PKT 2026
+Time zone: 	Pakistan Standard Time (Asia/Karachi)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ghazi
+User home directory: C:/Users/ghazi
+User working directory: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2020.1
+RDI_DATADIR: C:/Xilinx/Vivado/2020.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/ghazi/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/ghazi/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/ghazi/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/vivado.log
+Vivado journal file location: 	C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/vivado.jou
+Engine tmp dir: 	C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/.Xil/Vivado-1652-DESKTOP-1MEKRSF
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2020.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2020.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2020.1
+
+
+GUI allocated memory:	130 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 994 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\ghazi\CA-LAB-SPR-2026\Vivado Labs\Lab07\Lab07-CA-Task2\Lab07-CA-Task2.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.xpr} 
+// HMemoryUtils.trashcanNow. Engine heap size: 994 MB. GUI used memory: 50 MB. Current time: 3/12/26, 8:58:16 AM PKT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 108 MB (+111262kb) [00:00:39]
+// [Engine Memory]: 994 MB (+891083kb) [00:00:39]
+// WARNING: HEventQueue.dispatchEvent() is taking  5499 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'. 
+// Project name: Lab07-CA-Task2; location: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:16 . Memory (MB): peak = 1015.957 ; gain = 0.000 
+dismissDialog("Open Project"); // bz (cs)
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 119 MB (+4936kb) [00:00:51]
+// Elapsed time: 40 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cs)
+selectMenuItem(PAResourceCommand.PACommandNames_NEW_PROJECT, "New..."); // ai (cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+// [GUI Memory]: 129 MB (+4177kb) [00:01:29]
+// f (cs): New Project: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, f)
+// Elapsed time: 11 seconds
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "Lab07-Task3", true); // ac (Q, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, f)
+// Elapsed time: 31 seconds
+setFileChooser("C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v");
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, f)
+// Elapsed time: 100 seconds
+setFileChooser("C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.srcs/sources_1/new/register.v");
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, f)
+// F (f): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "switches"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (f)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, f)
+// F (f): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "led"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (f)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, f)
+// F (f): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "debouncer"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// [GUI Memory]: 138 MB (+3619kb) [00:04:23]
+dismissDialog("Create Source File"); // F (f)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, f)
+// F (f): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "TopModule"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files"); // a (E, f)
+// Elapsed time: 18 seconds
+setFileChooser("C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.srcs/constrs_1/new/const.xdc");
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+// bz (f):  Create Project : addNotify
+selectButton("OptionPane.button", "No"); // JButton (v, C)
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: create_project Lab07-Task3 {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3} -part xc7k70tfbv676-1 
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  3000 ms.
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.957 ; gain = 0.000 
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new'
+// Tcl Message: add_files -norecurse {{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v} {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.srcs/sources_1/new/register.v}} 
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// Tcl Message: file mkdir {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new} 
+// Tcl Message: close [ open {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/TopModule.v} w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/TopModule.v}} 
+// Tcl Message: close [ open {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/led.v} w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/led.v}} 
+// Tcl Message: close [ open {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/switches.v} w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/switches.v}} 
+// Tcl Message: close [ open {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/debouncer.v} w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/debouncer.v}} 
+// I (cs): Define Modules: addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 -norecurse {{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.srcs/constrs_1/new/const.xdc}} 
+dismissDialog("New Project"); // f (cs)
+// [GUI Memory]: 148 MB (+2880kb) [00:08:39]
+// Elapsed time: 322 seconds
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // E (g, I)
+selectTableHeader(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Port Name", 0); // ab (J, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 0, "false", 2); // ab (J, I)
+selectList(PAResourceAtoD.DefineModulesDialog_NEW_SOURCE_FILES, "led.v", 1); // L (J, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 0, "false", 2); // ab (J, I)
+selectList(PAResourceAtoD.DefineModulesDialog_NEW_SOURCE_FILES, "switches.v", 2); // L (J, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 0, "false", 2); // ab (J, I)
+selectList(PAResourceAtoD.DefineModulesDialog_NEW_SOURCE_FILES, "debouncer.v", 3); // L (J, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 0, "false", 2); // ab (J, I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+selectButton("FINISH", "Finish"); // JButton (j, f)
+// 'g' command handler elapsed time: 571 seconds
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Modules"); // I (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 35 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, switches (switches.v)]", 6, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, switches (switches.v)]", 6, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, switches (switches.v)]", 6, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, switches (switches.v)]", 6, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("switches.v", 68, 443, true, false, false, false, false); // bP (w, cs) - Shift Key
+typeControlKey((HResource) null, "switches.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("switches.v", 18, 485); // bP (w, cs)
+selectCodeEditor("switches.v", 18, 485, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("switches.v", 18, 485); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, switches (switches.v)]", 6, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, switches (switches.v)]", 6, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, led (led.v)]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, led (led.v)]", 5, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("led.v", 16, 382); // bP (w, cs)
+selectCodeEditor("led.v", 16, 382, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("led.v", 80, 384, true, false, false, false, false); // bP (w, cs) - Shift Key
+typeControlKey((HResource) null, "led.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, debouncer (debouncer.v)]", 4, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, debouncer (debouncer.v)]", 4, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("debouncer.v", 53, 118); // bP (w, cs)
+selectCodeEditor("debouncer.v", 38, 389); // bP (w, cs)
+selectCodeEditor("debouncer.v", 38, 389, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("debouncer.v", 38, 389); // bP (w, cs)
+typeControlKey((HResource) null, "debouncer.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RegisterFile (register.v)]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RegisterFile (register.v)]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 49 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU_32bit (ALU.v)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU_32bit (ALU.v), ALU_CHAIN[0].alu : ALU_1bit (ALU.v)]", 2, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+selectCodeEditor("ALU.v", 8, 398, true, false, false, false, false); // bP (w, cs) - Shift Key
+selectCodeEditor("ALU.v", 8, 398); // bP (w, cs)
+selectCodeEditor("ALU.v", 78, 505, true, false, false, false, false); // bP (w, cs) - Shift Key
+typeControlKey((HResource) null, "ALU.v", 'c'); // bP (w, cs)
+// Elapsed time: 49 seconds
+selectCodeEditor("ALU.v", 178, 48); // bP (w, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU_32bit (ALU.v)]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopModule (TopModule.v)]", 3, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopModule (TopModule.v)]", 3, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("TopModule.v", 78, 435, true, false, false, false, false); // bP (w, cs) - Shift Key
+typeControlKey((HResource) null, "TopModule.v", 'v'); // bP (w, cs)
+selectCodeEditor("TopModule.v", 71, 435); // bP (w, cs)
+selectCodeEditor("TopModule.v", 226, 273); // bP (w, cs)
+selectCodeEditor("TopModule.v", 116, 351); // bP (w, cs)
+selectCodeEditor("TopModule.v", 116, 351, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("TopModule.v", 116, 351); // bP (w, cs)
+selectCodeEditor("TopModule.v", 143, 363, true, false, false, false, false); // bP (w, cs) - Shift Key
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (cs): Launch Runs: addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectComboBox(PAResourceItoN.NumJobsChooser_NUMBER_OF_JOBS, "1", 0); // e (be, f)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Thu Mar 12 09:12:44 2026] Launched synth_1... Run output will be captured here: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 5 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 85 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Mar 12 09:14:11 2026] Launched impl_1... Run output will be captured here: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Failed: addNotify
+// Elapsed time: 48 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ag (cs)
+// Elapsed time: 12 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.srcs/constrs_1/new/const.xdc:7]. ]", 1, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "ID;-;[Common 17-55];-;;-;16;-;Resolution;-;If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.srcs/constrs_1/new/const.xdc:7]. ]", 1, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\ghazi\CA-LAB-SPR-2026\Vivado Labs\Lab06\CA_Lab06_task3\CA_Lab06_task3.srcs\constrs_1\new\const.xdc;-;;-;16;-;line;-;7;-;;-;16;-;"); // ah (J, cs)
+// Elapsed time: 17 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, DRC, Pin Planning, IO Standard, [DRC BIVB-1] Bank IO standard Support: Bank 34 has incompatible IO(s) because: The LVCMOS33 I/O standard is not supported for banks of type High Performance.  Move the following ports or change their properties:  . clk. ]", 9, false); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, DRC, Pin Planning, IO Standard, [DRC BIVB-1] Bank IO standard Support: Bank 34 has incompatible IO(s) because: The LVCMOS33 I/O standard is not supported for banks of type High Performance.  Move the following ports or change their properties:  . clk. ]", 9, false, false, false, false, false, true); // ah (J, cs) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, DRC, Pin Planning, IO Standard, [DRC BIVB-1] Bank IO standard Support: Bank 34 has incompatible IO(s) because: The LVCMOS33 I/O standard is not supported for banks of type High Performance.  Move the following ports or change their properties:  . clk. ]", 9, false); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, DRC, Pin Planning, IO Standard, [DRC BIVB-1] Bank IO standard Support: Bank 34 has incompatible IO(s) because: The LVCMOS33 I/O standard is not supported for banks of type High Performance.  Move the following ports or change their properties:  . clk. ]", 9, false, false, false, false, false, true); // ah (J, cs) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, DRC, Pin Planning, IO Standard, [DRC BIVB-1] Bank IO standard Support: Bank 34 has incompatible IO(s) because: The LVCMOS33 I/O standard is not supported for banks of type High Performance.  Move the following ports or change their properties:  . clk. ]", 9, false); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis]", 0, true); // ah (J, cs) - Node
+typeControlKey(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, (String) null, 'a'); // ah (J, cs)
+// Elapsed time: 25 seconds
+selectCodeEditor("const.xdc", 143, 175); // bP (w, cs)
+typeControlKey((HResource) null, "const.xdc", 'v'); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "const.xdc", 'c'); // bP (w, cs)
+// Elapsed time: 77 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (J, cs)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// d (cs): Settings: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1497 ms.
+selectButton(PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // t (a, d)
+// c (d): Select Device: addNotify
+setText("PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD", (String) null); // OverlayTextField (H, c)
+setText("PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD", "xc7a"); // OverlayTextField (H, c)
+setText("PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD", "xc7a35tcp"); // OverlayTextField (H, c)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a35tcpg236-1 ; 236 ; 106 ; 20800 ; 41600 ; 50 ; 0 ; 90 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 5 ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 3, "xc7a35tcpg236-1", 0); // w (J, c)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (c)
+dismissDialog("Select Device"); // c (d)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (d)
+// [GUI Memory]: 157 MB (+1944kb) [00:20:13]
+// [GUI Memory]: 170 MB (+4462kb) [00:20:13]
+// A (cs): Create New Run: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// b (cs): Create Run: addNotify
+dismissDialog("Create New Run"); // A (cs)
+dismissDialog("Create Run"); // b (cs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (d)
+// A (cs): Create New Run: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// b (cs): Create Run: addNotify
+dismissDialog("Create New Run"); // A (cs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (b)
+// Tcl Command: 'copy_run -name synth_1_copy_1 [get_runs synth_1] '
+// bz (cs):  Copy Run : addNotify
+// TclEventType: RUN_ADD
+// TclEventType: RUN_MODIFY
+// TclEventType: REPORT_CREATED
+// Tcl Message: copy_run -name synth_1_copy_1 [get_runs synth_1]  
+// Tcl Message: synth_1_copy_1 
+// bz (cs):  Change Settings : addNotify
+dismissDialog("Copy Run"); // bz (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: set_property part xc7a35tcpg236-1 [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PART_MODIFIED
+dismissDialog("Change Settings"); // bz (cs)
+dismissDialog("Settings"); // d (cs)
+selectCodeEditor("const.xdc", 231, 48); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TopModule.v", 6); // m (l, cs)
+selectCodeEditor("TopModule.v", 88, 266); // bP (w, cs)
+selectCodeEditor("TopModule.v", 88, 266, false, false, false, false, true); // bP (w, cs) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "const.xdc", 7); // m (l, cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Thu Mar 12 09:18:40 2026] Launched synth_1... Run output will be captured here: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.runs/synth_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+dismissDialog("Starting Design Runs"); // bz (cs)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Common 17-180] Spawn failed: No error. ]", 2); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Common 17-180] Spawn failed: No error. , [Common 17-180] Spawn failed: No error. ]", 3, false); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Common 17-180] Spawn failed: No error. , [Common 17-180] Spawn failed: No error. ]", 3, false); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Common 17-180] Spawn failed: No error. , [Common 17-180] Spawn failed: No error. ]", 3, false, false, false, false, false, true); // ah (J, cs) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TopModule.v", 6); // m (l, cs)
+// Elapsed time: 29 seconds
+selectCodeEditor("TopModule.v", 341, 200); // bP (w, cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 26 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Mar 12 09:19:49 2026] Launched impl_1... Run output will be captured here: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 85 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ag)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bz (cs):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Thu Mar 12 09:21:19 2026] Launched impl_1... Run output will be captured here: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Failed: addNotify
+// Elapsed time: 53 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+// [GUI Memory]: 181 MB (+2532kb) [00:24:28]
+dismissDialog("Bitstream Generation Failed"); // ag (cs)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 471, 108); // n (q, cs)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 471, 108, false, false, false, false, true); // n (q, cs) - Double Click
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 471, 108); // n (q, cs)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 353, 82); // n (q, cs)
+typeControlKey(PAResourceItoN.LogMonitor_MONITOR, "Monitor", 'c'); // n (q, cs)
+// Elapsed time: 85 seconds
+selectCodeEditor("TopModule.v", 146, 350); // bP (w, cs)
+selectCodeEditor("TopModule.v", 124, 290); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectCodeEditor("TopModule.v", 285, 393); // bP (w, cs)
+selectCodeEditor("TopModule.v", 18, 269); // bP (w, cs)
+typeControlKey((HResource) null, "TopModule.v", 'c'); // bP (w, cs)
+selectCodeEditor("TopModule.v", 15, 297); // bP (w, cs)
+selectCodeEditor("TopModule.v", 16, 297); // bP (w, cs)
+typeControlKey((HResource) null, "TopModule.v", 'c'); // bP (w, cs)
+// Elapsed time: 130 seconds
+selectCodeEditor("TopModule.v", 562, 149); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_OR_CREATE_CONSTRAINT_FILES, "Add or create constraints"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1'
+// C (cs): Create Constraints File: addNotify
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, "const_updated", true); // ac (D, C)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (C)
+dismissDialog("Create Constraints File"); // C (cs)
+selectTable(PAResourceAtoD.ConstraintsChooserPanel_FILE_TABLE, "const.xdc ; C:\\Users\\ghazi\\CA-LAB-SPR-2026\\Vivado Labs\\Lab06\\CA_Lab06_task3\\CA_Lab06_task3.srcs\\constrs_1\\new", 0, "C:\\Users\\ghazi\\CA-LAB-SPR-2026\\Vivado Labs\\Lab06\\CA_Lab06_task3\\CA_Lab06_task3.srcs\\constrs_1\\new", 1); // t (J, c)
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // E (g, c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 22 seconds
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1'
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1/new'
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1/new 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1/new'
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1/new 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1/new'
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1/new 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1/new'
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1/new 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// Tcl Command: 'file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1'
+// Tcl Message: file mkdir C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1 
+// Tcl Message: can't create directory "C:/Users/ghazi/CA-LAB-SPR-2026/Vivado": file already exists 
+// Tcl Message: file mkdir {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1/new} 
+// Tcl Message: close [ open {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1/new/const_updated.xdc} w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 {{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/constrs_1/new/const_updated.xdc}} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, const_updated.xdc]", 10, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, const_updated.xdc]", 10, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, const_updated.xdc]", 10, false, false, false, false, false, true); // B (F, cs) - Double Click
+typeControlKey((HResource) null, "const_updated.xdc", 'v'); // bP (w, cs)
+selectButton("OptionPane.button", "No"); // JButton (v, B)
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "const.xdc", 7); // m (l, cs)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, const.xdc]", 9, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, const.xdc]", 9, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ai (ao, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cs)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.srcs/constrs_1/new/const.xdc}}] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset constrs_1 {{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/CA_Lab06_task3/CA_Lab06_task3.srcs/constrs_1/new/const.xdc}} 
+selectCodeEditor("const_updated.xdc", 377, 409); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 994 MB. GUI used memory: 111 MB. Current time: 3/12/26, 9:28:17 AM PKT
