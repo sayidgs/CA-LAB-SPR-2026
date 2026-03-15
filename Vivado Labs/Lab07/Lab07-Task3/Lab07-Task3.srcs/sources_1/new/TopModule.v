@@ -34,9 +34,7 @@ module top_rf_alu(
     output [3:0] state_led // FSM state
 );
 
-/////////////////////////////////////////////////
 // Register File signals
-/////////////////////////////////////////////////
 
 reg WriteEnable;
 reg [4:0] rs1, rs2, rd;
@@ -45,16 +43,12 @@ reg [31:0] WriteData;
 wire [31:0] ReadData1;
 wire [31:0] ReadData2;
 
-/////////////////////////////////////////////////
 // ALU signals
-/////////////////////////////////////////////////
 
 wire [31:0] ALUResult;
 wire Zero;
 
-/////////////////////////////////////////////////
 // Instantiate Register File
-/////////////////////////////////////////////////
 
 RegisterFile RF(
     .clk(clk),
@@ -68,9 +62,7 @@ RegisterFile RF(
     .ReadData2(ReadData2)
 );
 
-/////////////////////////////////////////////////
 // Instantiate ALU
-/////////////////////////////////////////////////
 
 ALU_32bit ALU(
     .A(ReadData1),
@@ -80,9 +72,7 @@ ALU_32bit ALU(
     .Zero(Zero)
 );
 
-/////////////////////////////////////////////////
 // FSM
-/////////////////////////////////////////////////
 
 reg [3:0] state;
 
@@ -95,36 +85,7 @@ parameter STORE = 4;
 
 always @(posedge clk or posedge reset)
 begin
-    
-//    if(reset)
-//    begin
-//        state<=0;
-//        rs1<=0;
-//        rs2<=0;
-//    end 
-//    else
-//    begin
-//        case(state)
-        
-//        0: begin
-//            if(start)
-//                state<=1;
-//            end
-//       1: begin
-//            rs1<=32'h10101010;
-//            state<=2;
-//            end
-//       2: begin
-//            rs2<=32'h01010101;
-//            state<=3;
-//            end
-//       3: begin
-//           state<=3;
-//          end
-//       default: state<=0;
-//       endcase   
-//    end       
-//end       
+     
     if(reset)
     begin
         state <= IDLE;
@@ -135,9 +96,7 @@ begin
     
     case(state)
     
-    /////////////////////////////////////////////////
     // IDLE
-    /////////////////////////////////////////////////
     
     IDLE:
     begin
@@ -146,9 +105,7 @@ begin
             state <= WRITE_A;
     end
     
-    /////////////////////////////////////////////////
     // WRITE CONSTANT A
-    /////////////////////////////////////////////////
     
     WRITE_A:
     begin
@@ -158,9 +115,7 @@ begin
         state <= WRITE_B;
     end
     
-    /////////////////////////////////////////////////
     // WRITE CONSTANT B
-    /////////////////////////////////////////////////
     
     WRITE_B:
     begin
@@ -169,9 +124,7 @@ begin
         state <= EXECUTE;
     end
     
-    /////////////////////////////////////////////////
     // EXECUTE ALU
-    /////////////////////////////////////////////////
     
     EXECUTE:
     begin
@@ -183,9 +136,7 @@ begin
         state <= STORE;
     end
     
-    /////////////////////////////////////////////////
     // STORE RESULT
-    /////////////////////////////////////////////////
     
     STORE:
     begin
@@ -200,9 +151,7 @@ begin
     
     end
     
-    /////////////////////////////////////////////////
     // LED OUTPUT
-    /////////////////////////////////////////////////
     
     assign leds = ALUResult[11:0];
     assign state_led = state;

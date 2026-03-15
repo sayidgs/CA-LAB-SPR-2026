@@ -36,11 +36,9 @@ wire [1:0] device;
 
 assign device = address[9:8];
 
-assign DataMemRead  = (device == 2'b00) & readEnable;
-assign DataMemWrite = (device == 2'b00) & writeEnable;
-
-assign LEDWrite = (device == 2'b01) & writeEnable;
-
-assign SwitchReadEnable = (device == 2'b10) & readEnable;
+assign DataMemRead  = (device == 2'b00) && readEnable;
+assign DataMemWrite = (device == 2'b00) && writeEnable;
+assign LEDWrite = (device == 2'b01) && writeEnable;
+assign SwitchReadEnable = (device == 2'b10) && readEnable;
 
 endmodule
