@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -89,6 +88,8 @@ read_verilog -library xil_defaultlib {
   {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddDecoder_Top.v}
   {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddressDecoder.v}
   {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/DataMemory.v}
+  {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/led.v}
+  {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/switches.v}
   {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task3/Lab08-Task3.srcs/sources_1/new/memoryFPGA_Top.v}
 }
 OPTRACE "Adding files" END { }

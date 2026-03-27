@@ -11,6 +11,16 @@ set_property IOSTANDARD LVCMOS33 [get_ports rst]
 set_property PACKAGE_PIN T18 [get_ports btnU]
 set_property IOSTANDARD LVCMOS33 [get_ports btnU]
 
+## Button D
+set_property PACKAGE_PIN T17 [get_ports btnD]
+set_property IOSTANDARD LVCMOS33 [get_ports btnD]
+
+## Button C
+set_property PACKAGE_PIN W19 [get_ports btnC]
+set_property IOSTANDARD LVCMOS33 [get_ports btnC]
+
+
+
 ### SWITCHES
 #set_property PACKAGE_PIN V17 [get_ports {switches[0]}]
 #set_property PACKAGE_PIN V16 [get_ports {switches[1]}]

@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Mar 19 20:02:03 2026
+# Process ID: 4556
+# Current directory: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23500 C:\Users\ghazi\CA-LAB-SPR-2026\Vivado Labs\Lab08\Lab08-Task2\Lab08-Task2.xpr
+# Log file: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/vivado.log
+# Journal file: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+add_files -norecurse {{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/led.v} {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/switches.v}}
+update_compile_order -fileset sources_1
+launch_simulation
+source MemorySystem_tb.tcl
+current_wave_config {Untitled 1}
+add_wave {{/MemorySystem_tb/uut}} 
+current_wave_config {Untitled 1}
+add_wave {{/MemorySystem_tb/uut/DM}} 
+relaunch_sim
+close_sim
