@@ -80,9 +80,14 @@ initial begin
     // XOR
     funct3 = 3'b100; #10;
 
-    // -------- I-TYPE (ADDI) --------
+    // -------- I-TYPE (ADDI, SUBI & SLL) --------
     opcode = 7'b0010011;
     funct3 = 3'b000; funct7 = 7'b0000000; #10;
+
+    funct7 = 7'b0100000; #10;
+    
+    // SLL-I
+    funct3 = 3'b001;
 
     // -------- LOAD --------
     opcode = 7'b0000011; #10;
@@ -91,7 +96,7 @@ initial begin
     opcode = 7'b0100011; #10;
 
     // -------- BEQ --------
-    opcode = 7'b1100011; #10;
+    funct3 = 3'b000; opcode = 7'b1100011; #10;
 
     $finish;
 end

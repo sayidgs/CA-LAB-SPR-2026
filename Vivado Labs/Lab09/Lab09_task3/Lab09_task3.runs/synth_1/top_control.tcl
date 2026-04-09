@@ -70,7 +70,10 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 5
+set_param synth.incrementalSynthesisCache {C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task3/.Xil/Vivado-22760-HU-DOPX-ML18/incrSyn}
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -86,6 +89,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+  {C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task3/Lab09_task3.srcs/sources_1/new/FSM.v}
   {C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/alu_control.v}
   {C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/main_control.v}
   {C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task3/Lab09_task3.srcs/sources_1/new/Top.v}

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Thu Mar 26 11:28:54 2026
+| Date             : Thu Apr  9 10:35:51 2026
 | Host             : HU-DOPX-ML18 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_control_power_routed.rpt -pb top_control_power_summary_routed.pb -rpx top_control_power_routed.rpx
 | Design           : top_control
@@ -53,10 +53,10 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |       34 |       --- |             --- |
+| Slice Logic    |    <0.001 |       35 |       --- |             --- |
 |   LUT as Logic |    <0.001 |       11 |     20800 |            0.05 |
 |   Register     |    <0.001 |       16 |     41600 |            0.04 |
-|   Others       |     0.000 |        2 |       --- |             --- |
+|   Others       |     0.000 |        3 |       --- |             --- |
 | Signals        |    <0.001 |       42 |       --- |             --- |
 | I/O            |     0.001 |       34 |       106 |           32.08 |
 | Static Power   |     0.072 |          |           |                 |
