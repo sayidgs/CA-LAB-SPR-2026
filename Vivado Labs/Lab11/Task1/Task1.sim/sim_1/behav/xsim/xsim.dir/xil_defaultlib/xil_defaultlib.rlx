@@ -1,0 +1,11 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/ProgramCounter.v,1775885142,verilog,,C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/branchAdder.v,,ProgramCounter,,,,,,,,
+C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/branchAdder.v,1775887667,verilog,,C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/immGen.v,,branchAdder,,,,,,,,
+C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/immGen.v,1775885140,verilog,,C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/mux.v,,immGen,,,,,,,,
+C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/mux.v,1775885507,verilog,,C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/pcAdder.v,,mux2,,,,,,,,
+C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/pcAdder.v,1775885139,verilog,,C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/testbench.v,,pcAdder,,,,,,,,
+C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/testbench.v,1775887766,verilog,,,,tb_pc,,,,,,,,
