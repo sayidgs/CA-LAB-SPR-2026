@@ -33,7 +33,13 @@ module MainControl(
 
 always @(*) begin
     // Default safe values
-    
+    RegWrite = 0;
+    ALUSrc   = 0;
+    MemRead  = 0;
+    MemWrite = 0;
+    MemtoReg = 0;
+    Branch   = 0;
+    ALUOp    = 2'b00;
 
     case(opcode)
 

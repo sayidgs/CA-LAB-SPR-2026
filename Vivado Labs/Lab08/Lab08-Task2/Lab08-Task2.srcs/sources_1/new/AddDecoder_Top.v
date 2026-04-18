@@ -226,28 +226,40 @@ DataMemory DM(
 );
 
 // Task: Use 'switches' module to drive the LEDs
-switches led_driver (
+led_driver led_driver (
     .clk(clk),
     .rst(rst),
     .writeData(writeData),
     .writeEnable(LEDWrite),
-    .readEnable(1'b0),     // LEDs are write-only in this context
-    .memAddress(address[29:0]),
-    .readData(),           // Not used for reading
-    .leds(leds)            // Output to physical LEDs
+    .leds(leds)
+
+//    .clk(clk),
+//    .rst(rst),
+//    .writeData(writeData),
+//    .writeEnable(LEDWrite),
+//    .readEnable(1'b0),     // LEDs are write-only in this context
+//    .memAddress(address[29:0]),
+//    .readData(),           // Not used for reading
+//    .leds(leds)            // Output to physical LEDs
 );
 
 // Task: Use 'leds' module to read the physical Switches
-leds switch_reader (
+switch_reader switch_reader (
     .clk(clk),
     .rst(rst),
-    .btns(16'b0),          // No buttons used for data
-    .writeData(writeData),
-    .writeEnable(1'b0),    // Switches are read-only
     .readEnable(SwitchReadEnable),
-    .memAddress(address[29:0]),
-    .switches(switches),   // Input from physical switches
+    .switches(switches),
     .readData(switchReadData)
+
+//    .clk(clk),
+//    .rst(rst),
+//    .btns(16'b0),          // No buttons used for data
+//    .writeData(writeData),
+//    .writeEnable(1'b0),    // Switches are read-only
+//    .readEnable(SwitchReadEnable),
+//    .memAddress(address[29:0]),
+//    .switches(switches),   // Input from physical switches
+//    .readData(switchReadData)
 );
 
 // Mux for the final ReadData output
