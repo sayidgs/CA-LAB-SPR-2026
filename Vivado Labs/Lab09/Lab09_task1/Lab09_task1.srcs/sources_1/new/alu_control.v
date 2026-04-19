@@ -56,6 +56,9 @@ always @(*) begin
                 default: ALUControl = 4'b0000;
             endcase
         end
+        
+        // U-type / Special
+        2'b11: ALUControl = 4'b1111; // Custom code for "Pass B"
 
         default: ALUControl = 4'b0000;
 

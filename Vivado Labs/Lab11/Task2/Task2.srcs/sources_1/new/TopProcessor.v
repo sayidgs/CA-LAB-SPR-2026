@@ -35,6 +35,8 @@ wire reset_clean;
 
 // WIRES
 
+// Replace the old assign PCSrc = Branch & Zero; with this:
+
 // PC
 wire [31:0] PC, PC_next, PC_plus4, branchAddr;
 
@@ -62,6 +64,14 @@ wire PCSrc;
 
 // Data Memory / IO
 wire [31:0] ReadData;
+
+
+wire isBEQ = (instruction[14:12] == 3'b000);
+wire isBNE = (instruction[14:12] == 3'b001);
+
+assign PCSrc = Branch & ((isBEQ & Zero) | (isBNE & !Zero));
+
+
 
 // MODULE INSTANTIATION
 
