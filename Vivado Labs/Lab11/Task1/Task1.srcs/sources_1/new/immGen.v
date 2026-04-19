@@ -50,6 +50,11 @@ always @(*) begin
                        instr[11:8],
                        1'b0}; // already shifted
         end
+        
+        // U-type (e.g., lui)
+        7'b0110111: begin
+            imm_out = {instr[31:12], 12'b0};
+        end
 
         default: imm_out = 32'b0;
     endcase

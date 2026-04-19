@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="49" Path="C:/Users/gs10403/Downloads/CA-LAB-SPR-2026-main/CA-LAB-SPR-2026-main/Vivado Labs/Lab11/Task2/Task2.xpr">
+<Project Version="7" Minor="49" Path="C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="9ee9ebcdf6e244a6867081315626ec0b"/>
@@ -190,6 +190,12 @@
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Lab10/Task2/Task2.srcs/sources_1/new/program.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>

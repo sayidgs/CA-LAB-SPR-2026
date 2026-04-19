@@ -78,6 +78,13 @@ always @(*) begin
             Branch = 1;
             ALUOp  = 2'b01;
         end
+        
+        // LUI
+        7'b0110111: begin
+            RegWrite = 1;
+            ALUSrc   = 1;
+            ALUOp    = 2'b11; // New op for "Pass Immediate"
+        end
 
         default: begin
             // Keep defaults (safe)

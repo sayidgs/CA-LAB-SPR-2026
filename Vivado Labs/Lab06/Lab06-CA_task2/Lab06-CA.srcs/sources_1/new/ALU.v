@@ -126,6 +126,7 @@ always @(*) begin
         4'b0101: Result = A << B[4:0];      // SLL
         4'b0110: Result = A >> B[4:0];      // SRL
         4'b0111: Result = (A < B) ? 32'd1 : 32'd0; // SLT
+        4'b1111: Result = B; // LUI: Result is just the immediate
 
         default: Result = alu_result;       // all others
 
