@@ -55,6 +55,11 @@ always @(*) begin
         7'b0110111: begin
             imm_out = {instr[31:12], 12'b0};
         end
+        
+        // J-type (e.g., jal)
+        7'b1101111: begin
+            imm_out = {{12{instr[31]}}, instr[19:12], instr[20], instr[30:21], 1'b0};
+        end
 
         default: imm_out = 32'b0;
     endcase

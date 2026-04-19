@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -84,6 +85,7 @@ set_property ip_output_repo {c:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Ta
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+read_mem {{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab10/Task2/Task2.srcs/sources_1/new/program.mem}}
 read_verilog -library xil_defaultlib {
   {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v}
   {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddDecoder_Top.v}

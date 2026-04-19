@@ -26,7 +26,7 @@
 
 module TopLevelProcessor(
     input clk,
-//    input reset,
+    input reset,
     input [15:0] switches,
     output [15:0] leds
 );
@@ -64,13 +64,6 @@ wire PCSrc;
 
 // Data Memory / IO
 wire [31:0] ReadData;
-
-
-wire isBEQ = (instruction[14:12] == 3'b000);
-wire isBNE = (instruction[14:12] == 3'b001);
-
-assign PCSrc = Branch & ((isBEQ & Zero) | (isBNE & !Zero));
-
 
 
 // MODULE INSTANTIATION
@@ -178,13 +171,40 @@ branchAdder BA(
 );
 
 // Branch decision
-assign PCSrc = Branch & Zero;
+//assign PCSrc = Branch & Zero;
+wire isBEQ = (instruction[14:12] == 3'b000);
+wire isBNE = (instruction[14:12] == 3'b001);
+
+assign PCSrc = Branch & ((isBEQ & Zero) | (isBNE & !Zero));
+
 
 // PC MUX
-mux2 PC_mux(
+
+// OLD ONE
+//mux2 PC_mux(
+//    .a(PC_plus4),
+//    .b(branchAddr),
+//    .sel(PCSrc),
+//    .y(PC_next)
+//);
+
+
+// Define the final PC source
+wire [31:0] PC_inter; // Middle wire between Branch mux and Jump mux
+
+// Branch Mux (Already exists as PC_mux in code)
+mux2 Branch_Mux (
     .a(PC_plus4),
     .b(branchAddr),
     .sel(PCSrc),
+    .y(PC_inter)
+);
+
+// New Jump Mux
+mux2 Jump_Mux (
+    .a(PC_inter),
+    .b(branchAddr), // In JAL, branchAddr (PC + Imm) is also the Jump Target
+    .sel(Jump),
     .y(PC_next)
 );
 

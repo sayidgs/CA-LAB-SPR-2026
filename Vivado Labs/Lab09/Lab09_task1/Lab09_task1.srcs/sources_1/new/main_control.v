@@ -28,6 +28,7 @@ module MainControl(
     output reg MemWrite,
     output reg MemtoReg,
     output reg Branch,
+    output reg Jump,
     output reg [1:0] ALUOp
 );
 
@@ -39,6 +40,7 @@ always @(*) begin
     MemWrite = 0;
     MemtoReg = 0;
     Branch   = 0;
+    Jump=0;
     ALUOp    = 2'b00;
 
     case(opcode)
@@ -85,6 +87,13 @@ always @(*) begin
             ALUSrc   = 1;
             ALUOp    = 2'b11; // New op for "Pass Immediate"
         end
+        
+        // JAL
+        7'b1101111: begin
+            RegWrite = 1;
+            Jump     = 1; // You'll need to add this wire/port
+            // ALUSrc and ALUOp don't matter much here, but keep them safe
+        end
 
         default: begin
             // Keep defaults (safe)
@@ -94,6 +103,7 @@ always @(*) begin
             MemWrite = 0;
             MemtoReg = 0;
             Branch   = 0;
+            Jump=0;
             ALUOp    = 2'b00;
         end
 
