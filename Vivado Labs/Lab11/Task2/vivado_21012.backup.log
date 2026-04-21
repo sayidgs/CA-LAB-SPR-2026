@@ -1,0 +1,228 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Apr 19 20:44:33 2026
+# Process ID: 21012
+# Current directory: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14692 C:\Users\ghazi\CA-LAB-SPR-2026\Vivado Labs\Lab11\Task2\Task2.xpr
+# Log file: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/vivado.log
+# Journal file: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/gs10403/Downloads/CA-LAB-SPR-2026-main/CA-LAB-SPR-2026-main/Vivado Labs/Lab11/Task2' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 1015.445 ; gain = 0.000
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Sun Apr 19 20:45:59 2026] Launched synth_1...
+Run output will be captured here: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+[Sun Apr 19 20:49:09 2026] Launched impl_1...
+Run output will be captured here: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1105.254 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 184 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.272 . Memory (MB): peak = 1783.992 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.273 . Memory (MB): peak = 1783.992 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1783.992 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 63 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 63 instances
+
+open_run: Time (s): cpu = 00:00:44 ; elapsed = 00:00:31 . Memory (MB): peak = 1900.734 ; gain = 885.289
+report_utilization -name utilization_1
+add_files -norecurse {{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab10/Task2/Task2.srcs/sources_1/new/program.mem}}
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Sun Apr 19 21:44:36 2026] Launched synth_1...
+Run output will be captured here: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+[Sun Apr 19 21:47:40 2026] Launched impl_1...
+Run output will be captured here: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Sun Apr 19 21:48:58 2026] Launched synth_1...
+Run output will be captured here: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+[Sun Apr 19 21:54:47 2026] Launched impl_1...
+Run output will be captured here: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Sun Apr 19 22:00:45 2026] Launched synth_1...
+Run output will be captured here: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+[Sun Apr 19 22:08:10 2026] Launched impl_1...
+Run output will be captured here: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.runs/impl_1/runme.log
+report_utilization -name utilization_2
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: TopLevelProcessor
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2242.930 ; gain = 151.086
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevelProcessor' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/TopProcessor.v:27]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/debouncer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (1#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/debouncer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/ProgramCounter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (2#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/ProgramCounter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pcAdder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/pcAdder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pcAdder' (3#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/pcAdder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'instructionMemory' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab10/Task2/Task2.srcs/sources_1/new/InstructionMemory.v:49]
+INFO: [Synth 8-3876] $readmem data file 'program.mem' is read successfully [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab10/Task2/Task2.srcs/sources_1/new/InstructionMemory.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'instructionMemory' (4#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab10/Task2/Task2.srcs/sources_1/new/InstructionMemory.v:49]
+INFO: [Synth 8-6157] synthesizing module 'MainControl' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/main_control.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MainControl' (5#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/main_control.v:23]
+WARNING: [Synth 8-7071] port 'Jump' of module 'MainControl' is unconnected for instance 'control' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/TopProcessor.v:111]
+WARNING: [Synth 8-7023] instance 'control' of module 'MainControl' has 9 connections declared, but only 8 given [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/TopProcessor.v:111]
+INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.srcs/sources_1/new/register.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (6#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.srcs/sources_1/new/register.v:3]
+INFO: [Synth 8-6157] synthesizing module 'immGen' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/immGen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'immGen' (7#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/immGen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALUControl' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/alu_control.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/alu_control.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'ALUControl' (8#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/alu_control.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (9#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:82]
+INFO: [Synth 8-6157] synthesizing module 'ALU_1bit' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:40]
+INFO: [Synth 8-6157] synthesizing module 'full_adder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'full_adder' (10#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_1bit' (11#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (12#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:82]
+INFO: [Synth 8-6157] synthesizing module 'branchAdder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/branchAdder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'branchAdder' (13#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/branchAdder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'addressDecoderTop' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddDecoder_Top.v:191]
+INFO: [Synth 8-6157] synthesizing module 'AddressDecoder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddressDecoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'AddressDecoder' (14#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddressDecoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/DataMemory.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (15#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/DataMemory.v:23]
+INFO: [Synth 8-6157] synthesizing module 'led_driver' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'led_driver' (16#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-6157] synthesizing module 'switch_reader' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/switches.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'switch_reader' (17#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/switches.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'addressDecoderTop' (18#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddDecoder_Top.v:191]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevelProcessor' (19#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/TopProcessor.v:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2297.484 ; gain = 205.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2315.414 ; gain = 223.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2315.414 ; gain = 223.570
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 2315.414 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc]
+Finished Parsing XDC File [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2420.531 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 2908.719 ; gain = 816.875
+43 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:23 . Memory (MB): peak = 2908.719 ; gain = 816.875
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3009.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevelProcessor' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/TopProcessor.v:27]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/debouncer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (1#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/debouncer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/ProgramCounter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (2#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/ProgramCounter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pcAdder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/pcAdder.v:33]
+INFO: [Synth 8-6157] synthesizing module 'full_adder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'full_adder' (3#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'pcAdder' (4#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/pcAdder.v:33]
+INFO: [Synth 8-6157] synthesizing module 'instructionMemory' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab10/Task2/Task2.srcs/sources_1/new/InstructionMemory.v:49]
+INFO: [Synth 8-3876] $readmem data file 'program.mem' is read successfully [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab10/Task2/Task2.srcs/sources_1/new/InstructionMemory.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'instructionMemory' (5#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab10/Task2/Task2.srcs/sources_1/new/InstructionMemory.v:49]
+INFO: [Synth 8-6157] synthesizing module 'MainControl' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/main_control.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MainControl' (6#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/main_control.v:23]
+WARNING: [Synth 8-7071] port 'Jump' of module 'MainControl' is unconnected for instance 'control' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/TopProcessor.v:111]
+WARNING: [Synth 8-7023] instance 'control' of module 'MainControl' has 9 connections declared, but only 8 given [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/TopProcessor.v:111]
+INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.srcs/sources_1/new/register.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (7#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.srcs/sources_1/new/register.v:3]
+INFO: [Synth 8-6157] synthesizing module 'immGen' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/immGen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'immGen' (8#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/immGen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALUControl' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/alu_control.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/alu_control.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'ALUControl' (9#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/alu_control.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (10#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:82]
+INFO: [Synth 8-6157] synthesizing module 'ALU_1bit' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_1bit' (11#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (12#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:82]
+INFO: [Synth 8-6157] synthesizing module 'branchAdder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/branchAdder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'branchAdder' (13#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/branchAdder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'addressDecoderTop' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddDecoder_Top.v:191]
+INFO: [Synth 8-6157] synthesizing module 'AddressDecoder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddressDecoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'AddressDecoder' (14#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddressDecoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/DataMemory.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (15#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/DataMemory.v:23]
+INFO: [Synth 8-6157] synthesizing module 'led_driver' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'led_driver' (16#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-6157] synthesizing module 'switch_reader' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/switches.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'switch_reader' (17#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/switches.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'addressDecoderTop' (18#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddDecoder_Top.v:191]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevelProcessor' (19#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/TopProcessor.v:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 3009.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 3009.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 3009.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.040 . Memory (MB): peak = 3009.742 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc]
+Finished Parsing XDC File [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 3102.410 ; gain = 92.668
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 19 22:42:24 2026...

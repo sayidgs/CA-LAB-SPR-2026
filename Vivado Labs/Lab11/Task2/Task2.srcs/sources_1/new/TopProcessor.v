@@ -20,8 +20,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-// TO BE DONE - JUST COMMITING ON GIT RN -- 1st NEED TO DO LAB 10
-
 
 
 module TopLevelProcessor(
@@ -34,8 +32,6 @@ module TopLevelProcessor(
 wire reset_clean;
 
 // WIRES
-
-// Replace the old assign PCSrc = Branch & Zero; with this:
 
 // PC
 wire [31:0] PC, PC_next, PC_plus4, branchAddr;
@@ -78,10 +74,9 @@ end
 
 wire slow_clk = counter[26]; // VERY slow (~1 Hz)
 // Clock devider ends
-// Afer that i changed every clk(clk) to clk(slow_clk)
 
 debouncer db_reset(
-    .clk(slow_clk),
+    .clk(clk),
     .pbin(reset),
     .pbout(reset_clean)
 );

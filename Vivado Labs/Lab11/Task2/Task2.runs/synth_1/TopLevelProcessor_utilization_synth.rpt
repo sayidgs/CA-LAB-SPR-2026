@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Sun Apr 19 22:08:02 2026
-| Host         : DESKTOP-1MEKRSF running 64-bit major release  (build 9200)
+| Date         : Tue Apr 21 13:26:05 2026
+| Host         : HU-DOPX-ML18 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file TopLevelProcessor_utilization_synth.rpt -pb TopLevelProcessor_utilization_synth.pb
 | Design       : TopLevelProcessor
 | Device       : 7a35tcpg236-1
@@ -30,15 +30,15 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  926 |     0 |     20800 |  4.45 |
-|   LUT as Logic             |  674 |     0 |     20800 |  3.24 |
+| Slice LUTs*                |  934 |     0 |     20800 |  4.49 |
+|   LUT as Logic             |  682 |     0 |     20800 |  3.28 |
 |   LUT as Memory            |  252 |     0 |      9600 |  2.63 |
 |     LUT as Distributed RAM |  252 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  347 |     0 |     41600 |  0.83 |
-|   Register as Flip Flop    |  347 |     0 |     41600 |  0.83 |
+| Slice Registers            |  348 |     0 |     41600 |  0.84 |
+|   Register as Flip Flop    |  348 |     0 |     41600 |  0.84 |
 |   Register as Latch        |    0 |     0 |     41600 |  0.00 |
-| F7 Muxes                   |  250 |     0 |     16300 |  1.53 |
+| F7 Muxes                   |  226 |     0 |     16300 |  1.39 |
 | F8 Muxes                   |   63 |     0 |      8150 |  0.77 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 296   |          Yes |           - |        Reset |
+| 297   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 51    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -151,20 +151,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |  296 |        Flop & Latch |
+| FDCE     |  297 |        Flop & Latch |
 | RAMS64E  |  252 |  Distributed Memory |
-| MUXF7    |  250 |               MuxFx |
-| LUT5     |  237 |                 LUT |
-| LUT6     |  185 |                 LUT |
-| LUT3     |  170 |                 LUT |
-| LUT4     |  145 |                 LUT |
+| LUT6     |  232 |                 LUT |
+| MUXF7    |  226 |               MuxFx |
+| LUT5     |  225 |                 LUT |
+| LUT3     |  169 |                 LUT |
+| LUT4     |  126 |                 LUT |
 | MUXF8    |   63 |               MuxFx |
 | FDRE     |   51 |        Flop & Latch |
-| LUT2     |   32 |                 LUT |
+| LUT2     |   35 |                 LUT |
 | IBUF     |   18 |                  IO |
 | OBUF     |   16 |                  IO |
-| CARRY4   |   14 |          CarryLogic |
-| LUT1     |    7 |                 LUT |
+| CARRY4   |   15 |          CarryLogic |
+| LUT1     |   11 |                 LUT |
 | BUFG     |    2 |               Clock |
 +----------+------+---------------------+
 

@@ -9,6 +9,7 @@ verilog xil_defaultlib  \
 "../../../../Task2.srcs/sources_1/new/TopProcessor.v" \
 "../../../../../../Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/alu_control.v" \
 "../../../../../Task1/Task1.srcs/sources_1/new/branchAdder.v" \
+"../../../../../../Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/debouncer.v" \
 "../../../../../Task1/Task1.srcs/sources_1/new/immGen.v" \
 "../../../../../../Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/led.v" \
 "../../../../../../Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/main_control.v" \
