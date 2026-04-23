@@ -203,4 +203,55 @@
 //end
 
 //endmodule
+`timescale 1ns / 1ps
 
+module TopLevelProcessor_tb();
+
+    // Inputs
+    reg clk;
+    reg reset;
+    reg [15:0] switches;
+
+    // Outputs
+    wire [15:0] leds;
+
+    // Instantiate UUT
+    TopLevelProcessor uut (
+        .clk(clk),
+        .reset(reset),
+        .switches(switches),
+        .leds(leds)
+    );
+
+    // Clock Generation: 100MHz (10ns period)
+    always #5 clk = ~clk;
+
+    initial begin
+        // Initialize Inputs
+        clk = 0;
+        reset = 1;          // Assert Reset High
+        switches = 16'h0;
+
+        // Wait 100ns to allow memory to load and logic to settle
+        #100;
+        
+        // De-assert Reset
+        reset = 0;
+        
+        $display("--- Simulation Started ---");
+        $display("Expected Sequence: ADDI x2, ADDI x3, ADD, SUB, AND, OR, XOR");
+
+        // Run for enough time to see the instructions in your .mem file execute
+        #500;
+
+        $display("--- Simulation Finished ---");
+        $finish;
+    end
+
+    // Console Monitoring
+    initial begin
+        $monitor("Time: %0t | PC: %h | Instr: %h | ALU_Out: %h | WB: %h", 
+                 $time, uut.PC, uut.instruction, uut.ALUResult, uut.WriteData);
+    end
+
+endmodule

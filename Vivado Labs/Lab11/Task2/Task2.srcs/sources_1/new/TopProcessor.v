@@ -29,10 +29,10 @@ module TopLevelProcessor(
     output [15:0] leds
 );
 
-wire reset_clean;
+//wire reset_clean;
 
 // WIRES
-
+wire Jump;
 // PC
 wire [31:0] PC, PC_next, PC_plus4, branchAddr;
 
@@ -66,21 +66,24 @@ wire [31:0] ReadData;
 
 //  NEWEST addition
 // Clock devider starts
-reg [31:0] counter = 0;
+//reg [31:0] counter = 0;
 
-always @(posedge clk) begin
-    counter <= counter + 1;
-end
+//always @(posedge clk) begin
+//    counter <= counter + 1;
+//end
 
-wire slow_clk = counter[26]; // VERY slow (~1 Hz)
-// Clock devider ends
+//wire slow_clk = (counter[0] || 1'b1); // Forces simulation to use fast clock
+//wire slow_clk = counter[26]; // VERY slow (~1 Hz)
+wire slow_clk = clk;
+ //Clock devider ends
 
-debouncer db_reset(
-    .clk(clk),
-    .pbin(reset),
-    .pbout(reset_clean)
-);
+//debouncer db_reset(
+//    .clk(clk),
+//    .pbin(reset),
+//    .pbout(reset_clean)
+//);
 
+wire reset_clean = reset;             // Bypasses debouncer for simulation
 
 // Program Counter
 ProgramCounter PC_reg(

@@ -1,6 +1,6 @@
 Vivado Simulator 2020.1
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 9ee9ebcdf6e244a6867081315626ec0b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_TopLevelProcessor_behav xil_defaultlib.tb_TopLevelProcessor xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 9ee9ebcdf6e244a6867081315626ec0b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TopLevelProcessor_tb_behav xil_defaultlib.TopLevelProcessor_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -109,7 +109,6 @@ WARNING: [XSIM 43-4099] "C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab0
 INFO: [Common 17-14] Message 'XSIM 43-4099' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.debouncer
 Compiling module xil_defaultlib.ProgramCounter
 Compiling module xil_defaultlib.full_adder
 Compiling module xil_defaultlib.pcAdder_default
@@ -128,6 +127,6 @@ Compiling module xil_defaultlib.led_driver
 Compiling module xil_defaultlib.switch_reader
 Compiling module xil_defaultlib.addressDecoderTop
 Compiling module xil_defaultlib.TopLevelProcessor
-Compiling module xil_defaultlib.tb_TopLevelProcessor
+Compiling module xil_defaultlib.TopLevelProcessor_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_TopLevelProcessor_behav
+Built simulation snapshot TopLevelProcessor_tb_behav
