@@ -40,18 +40,24 @@ always @(*) begin
         2'b10: begin
             case(funct3)
 
-                3'b000: begin
-                    if (funct7 == 7'b0100000)
-                        ALUControl = 4'b0110; // SUB
-                    else
-                        ALUControl = 4'b0010; // ADD / ADDI
-                end
+                3'b000: ALUControl = (funct7 == 7'b0100000) ? 4'b0001 : 4'b0000; // SUB / ADD
+                3'b001: ALUControl = 4'b0101; // SLL
+                3'b101: ALUControl = 4'b0110; // SRL
+                3'b111: ALUControl = 4'b0010; // AND
+                3'b110: ALUControl = 4'b0011; // OR
+                3'b100: ALUControl = 4'b0100; // XOR
+//                3'b000: begin
+//                    if (funct7 == 7'b0100000)
+//                        ALUControl = 4'b0110; // SUB
+//                    else
+//                        ALUControl = 4'b0010; // ADD / ADDI
+//                end
 
-                3'b001: ALUControl = 4'b1000; // SLL
-                3'b101: ALUControl = 4'b1001; // SRL
-                3'b111: ALUControl = 4'b0000; // AND
-                3'b110: ALUControl = 4'b0001; // OR
-                3'b100: ALUControl = 4'b0011; // XOR
+//                3'b001: ALUControl = 4'b1000; // SLL
+//                3'b101: ALUControl = 4'b1001; // SRL
+//                3'b111: ALUControl = 4'b0000; // AND
+//                3'b110: ALUControl = 4'b0001; // OR
+//                3'b100: ALUControl = 4'b0011; // XOR
 
                 default: ALUControl = 4'b0000;
             endcase

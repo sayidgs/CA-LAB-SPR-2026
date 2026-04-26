@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log TopLevelProcessor.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopLevelProcessor.tcl
+    with args -log TopLevelProcessor_tb.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopLevelProcessor_tb.tcl
 
 
 
@@ -9,133 +9,248 @@
   **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
-source TopLevelProcessor.tcl -notrace
-Command: synth_design -top TopLevelProcessor -part xc7a35tcpg236-1
+source TopLevelProcessor_tb.tcl -notrace
+Command: synth_design -top TopLevelProcessor_tb -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17052
+INFO: [Synth 8-7075] Helper process launched with PID 8828
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1028.203 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1028.094 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'TopLevelProcessor' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/TopProcessor.v:25]
-INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/debouncer.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'debouncer' (1#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/debouncer.v:23]
-INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/ProgramCounter.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (2#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/ProgramCounter.v:23]
-INFO: [Synth 8-6157] synthesizing module 'pcAdder' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/pcAdder.v:33]
-INFO: [Synth 8-6157] synthesizing module 'full_adder' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:27]
-INFO: [Synth 8-6155] done synthesizing module 'full_adder' (3#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:27]
-INFO: [Synth 8-6155] done synthesizing module 'pcAdder' (4#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/pcAdder.v:33]
-INFO: [Synth 8-6157] synthesizing module 'instructionMemory' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab10/Task2/Task2.srcs/sources_1/new/InstructionMemory.v:49]
-INFO: [Synth 8-3876] $readmem data file 'program.mem' is read successfully [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab10/Task2/Task2.srcs/sources_1/new/InstructionMemory.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'instructionMemory' (5#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab10/Task2/Task2.srcs/sources_1/new/InstructionMemory.v:49]
-INFO: [Synth 8-6157] synthesizing module 'MainControl' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/main_control.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'MainControl' (6#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/main_control.v:23]
-WARNING: [Synth 8-7071] port 'Jump' of module 'MainControl' is unconnected for instance 'control' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/TopProcessor.v:106]
-WARNING: [Synth 8-7023] instance 'control' of module 'MainControl' has 9 connections declared, but only 8 given [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/TopProcessor.v:106]
-INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.srcs/sources_1/new/register.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (7#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.srcs/sources_1/new/register.v:3]
-INFO: [Synth 8-6157] synthesizing module 'immGen' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/immGen.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'immGen' (8#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/immGen.v:23]
-INFO: [Synth 8-6157] synthesizing module 'ALUControl' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/alu_control.v:23]
-INFO: [Synth 8-226] default block is never used [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/alu_control.v:31]
-INFO: [Synth 8-6155] done synthesizing module 'ALUControl' (9#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/alu_control.v:23]
-INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/mux.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'mux2' (10#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/mux.v:23]
-INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:82]
-INFO: [Synth 8-6157] synthesizing module 'ALU_1bit' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:40]
-INFO: [Synth 8-6155] done synthesizing module 'ALU_1bit' (11#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:40]
-INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (12#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:82]
-INFO: [Synth 8-6157] synthesizing module 'branchAdder' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/branchAdder.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'branchAdder' (13#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/branchAdder.v:23]
-INFO: [Synth 8-6157] synthesizing module 'addressDecoderTop' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddDecoder_Top.v:191]
-INFO: [Synth 8-6157] synthesizing module 'AddressDecoder' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddressDecoder.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'AddressDecoder' (14#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddressDecoder.v:23]
-INFO: [Synth 8-6157] synthesizing module 'DataMemory' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/DataMemory.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (15#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/DataMemory.v:23]
-INFO: [Synth 8-6157] synthesizing module 'led_driver' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/led.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'led_driver' (16#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/led.v:23]
-INFO: [Synth 8-6157] synthesizing module 'switch_reader' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/switches.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'switch_reader' (17#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/switches.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'addressDecoderTop' (18#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddDecoder_Top.v:191]
-INFO: [Synth 8-6155] done synthesizing module 'TopLevelProcessor' (19#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/TopProcessor.v:25]
+INFO: [Synth 8-6157] synthesizing module 'TopLevelProcessor_tb' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/proc_tb.v:208]
+INFO: [Synth 8-251] --- Simulation Started --- [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/proc_tb.v:242]
+INFO: [Synth 8-251] Expected Sequence: ADDI x2, ADDI x3, ADD, SUB, AND, OR, XOR [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/proc_tb.v:243]
+INFO: [Synth 8-251] --- Simulation Finished --- [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/proc_tb.v:248]
+INFO: [Synth 8-6157] synthesizing module 'TopLevelProcessor' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/TopProcessor.v:25]
+INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/ProgramCounter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (1#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/ProgramCounter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pcAdder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/pcAdder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pcAdder' (2#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/pcAdder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'instructionMemory' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab10/Task2/Task2.srcs/sources_1/new/InstructionMemory.v:49]
+INFO: [Synth 8-3876] $readmem data file 'program.mem' is read successfully [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab10/Task2/Task2.srcs/sources_1/new/InstructionMemory.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'instructionMemory' (3#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab10/Task2/Task2.srcs/sources_1/new/InstructionMemory.v:49]
+INFO: [Synth 8-6157] synthesizing module 'MainControl' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/main_control.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MainControl' (4#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/main_control.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.srcs/sources_1/new/register.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (5#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-CA-Task2/Lab07-CA-Task2.srcs/sources_1/new/register.v:3]
+INFO: [Synth 8-6157] synthesizing module 'immGen' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/immGen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'immGen' (6#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/immGen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALUControl' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/alu_control.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/alu_control.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'ALUControl' (7#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab09/Lab09_task1/Lab09_task1.srcs/sources_1/new/alu_control.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (8#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:82]
+INFO: [Synth 8-6157] synthesizing module 'ALU_1bit' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:40]
+INFO: [Synth 8-6157] synthesizing module 'full_adder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'full_adder' (9#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_1bit' (10#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (11#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab06/Lab06-CA_task2/Lab06-CA.srcs/sources_1/new/ALU.v:82]
+INFO: [Synth 8-6157] synthesizing module 'branchAdder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/branchAdder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'branchAdder' (12#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task1/Task1.srcs/sources_1/new/branchAdder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'addressDecoderTop' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddDecoder_Top.v:191]
+INFO: [Synth 8-6157] synthesizing module 'AddressDecoder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddressDecoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'AddressDecoder' (13#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddressDecoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/DataMemory.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (14#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/DataMemory.v:23]
+INFO: [Synth 8-6157] synthesizing module 'led_driver' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'led_driver' (15#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-6157] synthesizing module 'switch_reader' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/switches.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'switch_reader' (16#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab07/Lab07-Task3/Lab07-Task3.srcs/sources_1/new/switches.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'addressDecoderTop' (17#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab08/Lab08-Task2/Lab08-Task2.srcs/sources_1/new/AddDecoder_Top.v:191]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevelProcessor' (18#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/TopProcessor.v:25]
+WARNING: [Synth 8-85] always block has no event control specified [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/proc_tb.v:227]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevelProcessor_tb' (19#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/sources_1/new/proc_tb.v:208]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1028.203 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1028.094 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1028.203 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1028.094 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1028.203 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1028.094 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1028.203 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1028.094 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc]
-Finished Parsing XDC File [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TopLevelProcessor_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/TopLevelProcessor_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:7]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:7]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[0]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[1]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[2]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[3]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[4]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[5]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[6]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[7]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[8]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[9]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[10]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[11]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[12]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[13]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[14]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[15]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[*]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[0]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[1]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[2]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[3]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[4]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[5]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[6]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[7]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[8]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[9]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[10]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[11]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[12]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[13]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[14]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[15]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[*]'. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1043.141 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1029.305 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1043.141 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1029.305 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1043.141 ; gain = 14.938
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1029.305 ; gain = 1.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1043.141 ; gain = 14.938
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1029.305 ; gain = 1.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1043.141 ; gain = 14.938
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1029.305 ; gain = 1.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1043.141 ; gain = 14.938
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1029.305 ; gain = 1.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 192   
+	   2 Input      1 Bit         XORs := 128   
 +---Registers : 
 	               32 Bit    Registers := 34    
 	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
 +---Muxes : 
-	  26 Input   32 Bit        Muxes := 1     
+	   8 Input   32 Bit        Muxes := 1     
 	  33 Input   32 Bit        Muxes := 2     
 	   6 Input   32 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 7     
+	   2 Input   32 Bit        Muxes := 8     
 	   5 Input   32 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 1     
-	   7 Input    4 Bit        Muxes := 1     
 	   6 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 1     
 	   5 Input    3 Bit        Muxes := 1     
 	   8 Input    2 Bit        Muxes := 1     
 	   8 Input    1 Bit        Muxes := 6     
-	   2 Input    1 Bit        Muxes := 64    
+	   2 Input    1 Bit        Muxes := 65    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -152,18 +267,18 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1107.809 ; gain = 79.605
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1114.898 ; gain = 86.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Preliminary Mapping	Report (see note below)
-+------------------+----------------------+-----------+----------------------+-----------------+
-|Module Name       | RTL Object           | Inference | Size (Depth x Width) | Primitives      | 
-+------------------+----------------------+-----------+----------------------+-----------------+
-|TopLevelProcessor | MEM_IO/DM/memory_reg | Implied   | 512 x 32             | RAM256X1S x 64	 | 
-+------------------+----------------------+-----------+----------------------+-----------------+
++---------------------+--------------------------+-----------+----------------------+-----------------+
+|Module Name          | RTL Object               | Inference | Size (Depth x Width) | Primitives      | 
++---------------------+--------------------------+-----------+----------------------+-----------------+
+|TopLevelProcessor_tb | uut/MEM_IO/DM/memory_reg | Implied   | 512 x 32             | RAM256X1S x 64	 | 
++---------------------+--------------------------+-----------+----------------------+-----------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
@@ -173,24 +288,24 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1107.809 ; gain = 79.605
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1114.898 ; gain = 86.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 1107.809 ; gain = 79.605
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1114.898 ; gain = 86.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping	Report
-+------------------+----------------------+-----------+----------------------+-----------------+
-|Module Name       | RTL Object           | Inference | Size (Depth x Width) | Primitives      | 
-+------------------+----------------------+-----------+----------------------+-----------------+
-|TopLevelProcessor | MEM_IO/DM/memory_reg | Implied   | 512 x 32             | RAM256X1S x 64	 | 
-+------------------+----------------------+-----------+----------------------+-----------------+
++---------------------+--------------------------+-----------+----------------------+-----------------+
+|Module Name          | RTL Object               | Inference | Size (Depth x Width) | Primitives      | 
++---------------------+--------------------------+-----------+----------------------+-----------------+
+|TopLevelProcessor_tb | uut/MEM_IO/DM/memory_reg | Implied   | 512 x 32             | RAM256X1S x 64	 | 
++---------------------+--------------------------+-----------+----------------------+-----------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -199,7 +314,7 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 1107.809 ; gain = 79.605
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1114.898 ; gain = 86.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -217,37 +332,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1107.809 ; gain = 79.605
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 1114.898 ; gain = 86.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1107.809 ; gain = 79.605
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 1114.898 ; gain = 86.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1107.809 ; gain = 79.605
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1114.898 ; gain = 86.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1107.809 ; gain = 79.605
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1114.898 ; gain = 86.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1107.809 ; gain = 79.605
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1114.898 ; gain = 86.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1107.809 ; gain = 79.605
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1114.898 ; gain = 86.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -263,42 +378,40 @@ Report Cell Usage:
 +------+----------+------+
 |      |Cell      |Count |
 +------+----------+------+
-|1     |BUFG      |     2|
-|2     |CARRY4    |    15|
-|3     |LUT1      |    11|
-|4     |LUT2      |    35|
-|5     |LUT3      |   169|
-|6     |LUT4      |   126|
-|7     |LUT5      |   225|
-|8     |LUT6      |   232|
-|9     |MUXF7     |   100|
-|10    |RAM256X1S |    63|
-|11    |FDCE      |   297|
-|12    |FDRE      |    51|
-|13    |IBUF      |    18|
-|14    |OBUF      |    16|
+|1     |BUFG      |     1|
+|2     |CARRY4    |    24|
+|3     |LUT1      |    26|
+|4     |LUT2      |    97|
+|5     |LUT3      |   132|
+|6     |LUT4      |    42|
+|7     |LUT5      |   193|
+|8     |LUT6      |   801|
+|9     |MUXF7     |   256|
+|10    |RAM256X1S |    32|
+|11    |FDRE      |  1024|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1107.809 ; gain = 79.605
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1114.898 ; gain = 86.805
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 1107.809 ; gain = 64.668
-Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 1107.809 ; gain = 79.605
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 1114.898 ; gain = 85.594
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1114.898 ; gain = 86.805
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1108.266 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 178 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1114.898 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 312 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'TopLevelProcessor_tb' is not ideal for floorplanning, since the cellview 'RegisterFile' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1108.266 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1114.898 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 63 instances were transformed.
-  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 63 instances
+  A total of 32 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-55 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+57 Infos, 41 Warnings, 39 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:09 . Memory (MB): peak = 1108.266 ; gain = 80.062
-INFO: [Common 17-1381] The checkpoint 'C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.runs/synth_1/TopLevelProcessor.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file TopLevelProcessor_utilization_synth.rpt -pb TopLevelProcessor_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 21 13:26:06 2026...
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1114.898 ; gain = 86.805
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.runs/synth_1/TopLevelProcessor_tb.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TopLevelProcessor_tb_utilization_synth.rpt -pb TopLevelProcessor_tb_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 26 12:22:36 2026...

@@ -114,7 +114,8 @@ MainControl control(
     .MemWrite(MemWrite),
     .MemtoReg(MemtoReg),
     .Branch(Branch),
-    .ALUOp(ALUOp)
+    .ALUOp(ALUOp),
+    .Jump(Jump)
 );
 
 // Register File
@@ -220,11 +221,14 @@ addressDecoderTop MEM_IO(
 );
 
 // Write Back MUX
-mux2 WB_mux(
-    .a(ALUResult),
-    .b(ReadData),
-    .sel(MemtoReg),
-    .y(WriteData)
-);
+//mux2 WB_mux(
+//    .a(ALUResult),
+//    .b(ReadData),
+//    .sel(MemtoReg),
+//    .y(WriteData)
+//);
+assign WriteData = (Jump) ? PC_plus4 :
+                   (MemtoReg) ? ReadData :
+                   ALUResult;
 
 endmodule

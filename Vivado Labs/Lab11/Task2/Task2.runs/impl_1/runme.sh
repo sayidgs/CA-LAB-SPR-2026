@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.runs/impl_1'
+HD_PWD='C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log TopLevelProcessor.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source TopLevelProcessor.tcl -notrace
+EAStep vivado -log TopLevelProcessor_tb.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source TopLevelProcessor_tb.tcl -notrace
 
 

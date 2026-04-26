@@ -58,7 +58,9 @@ initial begin
 end
 
 always @(*) begin
-    instruction = memory[instAddress >> 2];
+//    instruction = memory[instAddress >> 2];
+
+    instruction = memory[instAddress];
 end
 
 endmodule

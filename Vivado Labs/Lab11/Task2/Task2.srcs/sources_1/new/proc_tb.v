@@ -238,11 +238,12 @@ module TopLevelProcessor_tb();
         // De-assert Reset
         reset = 0;
         
+        
         $display("--- Simulation Started ---");
         $display("Expected Sequence: ADDI x2, ADDI x3, ADD, SUB, AND, OR, XOR");
 
         // Run for enough time to see the instructions in your .mem file execute
-        #500;
+        #200;
 
         $display("--- Simulation Finished ---");
         $finish;
