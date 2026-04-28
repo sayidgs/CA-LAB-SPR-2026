@@ -233,7 +233,7 @@ module TopLevelProcessor_tb();
         switches = 16'h0;
 
         // Wait 100ns to allow memory to load and logic to settle
-        #100;
+        #50;
         
         // De-assert Reset
         reset = 0;
@@ -243,16 +243,31 @@ module TopLevelProcessor_tb();
         $display("Expected Sequence: ADDI x2, ADDI x3, ADD, SUB, AND, OR, XOR");
 
         // Run for enough time to see the instructions in your .mem file execute
-        #200;
+        #10000;
 
         $display("--- Simulation Finished ---");
         $finish;
     end
 
+
+
     // Console Monitoring
     initial begin
         $monitor("Time: %0t | PC: %h | Instr: %h | ALU_Out: %h | WB: %h", 
                  $time, uut.PC, uut.instruction, uut.ALUResult, uut.WriteData);
+    
+       // $monitor("Time=%0t | ALUResult=%d | MemWrite=%b | Addr=%d | WriteData=%d",
+          //    $time, uut.ALUResult, uut.MemWrite, uut.ALUResult[10:2], uut.ReadData2);
+              
+        $monitor("Time=%0t | Instr=%h | rs1=%d | rs2=%d | imm=%d | ALUSrc=%b | ALUResult=%d",
+              $time,
+              uut.instruction,
+              uut.ReadData1,
+              uut.ReadData2,
+              uut.imm,
+              uut.ALUSrc,
+              uut.ALUResult);
+    
     end
 
 endmodule

@@ -14,8 +14,8 @@ Command: link_design -top TopLevelProcessor_tb -part xc7a35tcpg236-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1028.566 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 312 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1028.664 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 308 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'TopLevelProcessor_tb' is not ideal for floorplanning, since the cellview 'RegisterFile' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-479] Netlist was created with Vivado 2020.1
@@ -140,14 +140,14 @@ CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.srcs/constrs_1/new/FinalConst.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1028.566 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1028.664 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 32 instances were transformed.
   RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 32 instances
 
 7 Infos, 40 Warnings, 39 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1028.566 ; gain = 0.000
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1028.664 ; gain = 0.000
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -158,54 +158,54 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1028.566 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1028.664 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: f5faf762
+Ending Cache Timing Information Task | Checksum: f9127c95
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1306.621 ; gain = 278.055
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1307.980 ; gain = 279.316
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 34 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 107850b3c
+Phase 1 Retarget | Checksum: 1307e472c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.193 . Memory (MB): peak = 1508.125 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 24 cells
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.180 . Memory (MB): peak = 1508.742 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 27 cells
 
 Phase 2 Constant propagation
-INFO: [Opt 31-138] Pushed 4 inverter(s) to 43 load pin(s).
-Phase 2 Constant propagation | Checksum: d2fa25fc
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 8 load pin(s).
+Phase 2 Constant propagation | Checksum: 10d80fc0e
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.791 . Memory (MB): peak = 1508.125 ; gain = 0.000
-INFO: [Opt 31-389] Phase Constant propagation created 166 cells and removed 1410 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.713 . Memory (MB): peak = 1508.742 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 134 cells and removed 1335 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: f73c0488
+Phase 3 Sweep | Checksum: 118b871ad
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1508.125 ; gain = 0.000
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1360 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1508.742 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1419 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: f73c0488
+Phase 4 BUFG optimization | Checksum: 118b871ad
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1508.125 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1508.742 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: f73c0488
+Phase 5 Shift Register Optimization | Checksum: 118b871ad
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1508.125 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1508.742 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: f73c0488
+Phase 6 Post Processing Netlist | Checksum: 118b871ad
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1508.125 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1508.742 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -214,9 +214,9 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               0  |              24  |                                              0  |
-|  Constant propagation         |             166  |            1410  |                                              0  |
-|  Sweep                        |               0  |            1360  |                                              0  |
+|  Retarget                     |               0  |              27  |                                              0  |
+|  Constant propagation         |             134  |            1335  |                                              0  |
+|  Sweep                        |               0  |            1419  |                                              0  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
 |  Post Processing Netlist      |               0  |               0  |                                              0  |
@@ -226,31 +226,31 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1508.125 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1508.742 ; gain = 0.000
 Ending Logic Optimization Task | Checksum: c00cad3a
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1508.125 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1508.742 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
 Ending Power Optimization Task | Checksum: c00cad3a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1508.125 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1508.742 ; gain = 0.000
 
 Starting Final Cleanup Task
 Ending Final Cleanup Task | Checksum: c00cad3a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1508.125 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1508.742 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1508.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1508.742 ; gain = 0.000
 Ending Netlist Obfuscation Task | Checksum: c00cad3a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1508.125 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1508.742 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 24 Infos, 40 Warnings, 39 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1508.125 ; gain = 479.559
+opt_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1508.742 ; gain = 480.078
 INFO: [Timing 38-480] Writing timing data to binary archive.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/Task2.runs/impl_1/TopLevelProcessor_tb_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file TopLevelProcessor_tb_drc_opted.rpt -pb TopLevelProcessor_tb_drc_opted.pb -rpx TopLevelProcessor_tb_drc_opted.rpx
@@ -278,20 +278,20 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1508.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1508.742 ; gain = 0.000
 Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 00000000
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1508.125 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1508.742 ; gain = 0.000
 Phase 1 Placer Initialization | Checksum: 00000000
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1508.125 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1508.742 ; gain = 0.000
 ERROR: [Place 30-494] The design is empty
 Resolution: Check if opt_design has removed all the leaf cells of your design.  Check whether you have instantiated and connected all of the top level ports.
 Ending Placer Task | Checksum: 00000000
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1508.125 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1508.742 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 41 Infos, 40 Warnings, 39 Critical Warnings and 2 Errors encountered.
 place_design failed
 ERROR: [Common 17-69] Command failed: Placer could not place all instances
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 26 12:23:17 2026...
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 26 13:40:58 2026...

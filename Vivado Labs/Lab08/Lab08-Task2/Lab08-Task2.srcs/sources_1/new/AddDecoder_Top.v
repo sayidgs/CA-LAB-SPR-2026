@@ -220,7 +220,7 @@ DataMemory DM(
     .clk(clk),
     .MemWrite(DataMemWrite),
     .MemRead(DataMemRead),
-    .address(address[8:0]), 
+    .address(address[10:2]), 
     .write_data(writeData),
     .read_data(memReadData)
 );

@@ -31,7 +31,7 @@ always @(*) begin
     case(ALUOp)
 
         // Load/Store ? ADD
-        2'b00: ALUControl = 4'b0010;
+        2'b00: ALUControl = 4'b0000;
 
         // Branch ? SUB (for BEQ)
         2'b01: ALUControl = 4'b0110;
@@ -46,6 +46,7 @@ always @(*) begin
                 3'b111: ALUControl = 4'b0010; // AND
                 3'b110: ALUControl = 4'b0011; // OR
                 3'b100: ALUControl = 4'b0100; // XOR
+                3'b010: ALUControl = 4'b0111; // SLT
 //                3'b000: begin
 //                    if (funct7 == 7'b0100000)
 //                        ALUControl = 4'b0110; // SUB

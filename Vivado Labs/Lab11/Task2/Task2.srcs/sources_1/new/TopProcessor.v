@@ -33,6 +33,10 @@ module TopLevelProcessor(
 
 // WIRES
 wire Jump;
+
+// For JALR
+wire isJALR = (instruction[6:0] == 7'b1100111);
+
 // PC
 wire [31:0] PC, PC_next, PC_plus4, branchAddr;
 
@@ -199,13 +203,25 @@ mux2 Branch_Mux (
     .y(PC_inter)
 );
 
-// New Jump Mux
+// Jump target logic
+wire [31:0] jalr_target;
+assign jalr_target = (ALUResult) & 32'hFFFFFFFE;
+
+// Fixed Jump Mux for JALR
 mux2 Jump_Mux (
     .a(PC_inter),
-    .b(branchAddr), // In JAL, branchAddr (PC + Imm) is also the Jump Target
+    .b(isJALR ? jalr_target : branchAddr),
     .sel(Jump),
     .y(PC_next)
 );
+
+//// New Jump Mux
+//mux2 Jump_Mux (
+//    .a(PC_inter),
+//    .b(branchAddr), // In JAL, branchAddr (PC + Imm) is also the Jump Target
+//    .sel(Jump),
+//    .y(PC_next)
+//);
 
 // Data Memory + IO
 addressDecoderTop MEM_IO(

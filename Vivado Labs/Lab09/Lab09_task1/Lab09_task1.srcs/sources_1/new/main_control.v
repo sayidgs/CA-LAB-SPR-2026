@@ -94,6 +94,13 @@ always @(*) begin
             Jump     = 1; // You'll need to add this wire/port
             // ALUSrc and ALUOp don't matter much here, but keep them safe
         end
+        
+        7'b1100111: begin // JALR
+            RegWrite = 1;
+            ALUSrc   = 1;
+            Jump     = 1;
+            ALUOp    = 2'b00; // ADD
+        end
 
         default: begin
             // Keep defaults (safe)
