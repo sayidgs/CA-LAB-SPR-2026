@@ -1,0 +1,118 @@
+# --- Setup ---
+addi sp, x0, 500       # Initialize Stack Pointer[cite: 17, 19]
+addi s1, x0, 512       # LED Address (0x200)[cite: 1]
+addi s2, x0, 768       # Switch Address (0x300)[cite: 1]
+
+# --- 1. Test LUI & SW ---
+# Goal: See 0x1234 on LEDs
+lui  t0, 0x12345       # Test LUI
+sw   t0, 0(s1)         # Test SW to LEDs[cite: 1, 13]
+#jal  ra, delay         # Wait so you can see it
+
+# --- 2. Test ADDI & ADD ---
+# Goal: 10 + 5 = 15 (0xF) on LEDs
+addi t1, x0, 10        # Test ADDI
+addi t2, x0, 5
+add  t3, t1, t2        # Test ADD[cite: 4, 13]
+sw   t3, 0(s1)         # Display 15
+#jal  ra, delay
+
+# --- 3. Test SLT (Set Less Than) ---
+# Goal: 5 < 10 is True, LEDs show 1 (0x1)
+slt  t4, t2, t1        # Test SLT[cite: 4, 5]
+sw   t4, 0(s1)         # Display 1
+#jal  ra, delay
+
+# --- 4. Test LW (Load Word) & Storage ---
+# Goal: Store 15 in memory, then load it back to LEDs
+sw   t3, 4(x0)         # Store 15 at DataMemory[1][cite: 7]
+addi t3, x0, 0         # Clear register
+lw   t3, 4(x0)         # Test LW
+sw   t3, 0(s1)         # Display loaded 15
+#jal  ra, delay
+
+# --- 5. Test JAL / JALR ---
+# Goal: Jump to a label, display a "success" pattern, and return
+jal  ra, test_jump     # Test JAL
+addi t5, x0, 0x00AA    # Pattern indicating successful return
+sw   t5, 0(s1)
+j    end               # Test 'j' (alias for jal x0)
+
+# --- Subroutines ---
+
+test_jump:
+    addi t6, x0, 0x0055 # Pattern indicating jump success
+    sw   t6, 0(s1)
+    #jal  ra, delay
+    jalr x0, 0(ra)     # Test JALR return[cite: 13, 19]
+
+delay:
+    # Adjust this constant based on your slow_clk
+    # If using counter[23] (~6Hz), 10-20 iterations is enough
+    addi t0, x0, 10    
+inner_loop:
+    addi t0, t0, -1
+    bne  t0, x0, inner_loop # Test BNE[cite: 19]
+    jalr x0, 0(ra)          # Return[cite: 19]
+
+end:
+    j end
+
+
+
+MACHINE CODE:
+
+30000493
+20000913
+1f400113
+0004a503
+fe050ee3
+00a92023
+014000ef
+00b92023
+0004a283
+fe029ee3
+fe5ff06f
+ff810113
+00112223
+00100593
+00050313
+02030263
+00058393
+fff30e13
+000e0863
+007585b3
+fffe0e13
+ff5ff06f
+fff30313
+fe1ff06f
+00412083
+00810113
+00008067
+1f400113
+20000493
+30000913
+123452b7
+0054a023
+00a00313
+00500393
+00730e33
+01c4a023
+0063aeb3
+01d4a023
+01c02223
+00000e13
+00402e03
+01c4a023
+010000ef
+0aa00f13
+01e4a023
+0200006f
+05500f93
+01f4a023
+00008067
+00a00293
+fff28293
+fe029ee3
+00008067
+0000006f

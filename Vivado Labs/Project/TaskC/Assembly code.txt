@@ -1,0 +1,174 @@
+OLD ONE:
+
+main:
+    addi s1, x0, 768      # Switch address (0x300)
+    addi s2, x0, 512      # LED address (0x200)[cite: 1]
+    addi sp, x0, 500      # Initialize stack pointer[cite: 17]
+
+poll_input:
+    lw   a0, 0(s1)        # Read switch[cite: 18, 19]
+    beq  a0, x0, poll_input # Wait for non-zero input
+
+    # Display input immediately
+    sw   a0, 0(s2)        # Show n on LEDs[cite: 1, 12]
+    
+    jal  ra, factorial    # Jump to calculation[cite: 19]
+    
+    # Display Result
+    sw   a1, 0(s2)        # Show result on LEDs[cite: 1, 12]
+
+wait_for_reset:
+    lw   t0, 0(s1)        # Read switch[cite: 19]
+    bne  t0, x0, wait_for_reset # WAIT until user turns switches OFF[cite: 19]
+    j    poll_input       # Now ready for next input[cite: 19]
+
+# --- Factorial Subroutine ---
+factorial:
+    addi sp, sp, -8       # Save RA[cite: 17]
+    sw   ra, 4(sp)
+    
+    addi a1, x0, 1        # Result = 1
+    addi t1, a0, 0        # Counter = n
+
+fact_loop:
+    beq  t1, x0, fact_done # If n=0, done[cite: 19]
+    
+    # Multiplication: a1 = a1 * t1 (using addition)
+    addi t2, a1, 0        # Temp copy of result
+    addi t3, t1, -1       # Inner loop counter
+mult_loop:
+    beq  t3, x0, mult_done # If t3=0, mult finished[cite: 19]
+    add  a1, a1, t2       # a1 = a1 + original_a1[cite: 4]
+    addi t3, t3, -1
+    j    mult_loop        #[cite: 19]
+
+mult_done:
+    addi t1, t1, -1       # n = n - 1
+    j    fact_loop        #[cite: 19]
+
+fact_done:
+    lw   ra, 4(sp)        # Restore RA[cite: 17]
+    addi sp, sp, 8
+    jalr x0, 0(ra)        # Return[cite: 19]
+
+
+OLD ONE MACHINE CODE:
+30000493
+20000913
+1f400113
+0004a503
+fe050ee3
+00a92023
+014000ef
+00b92023
+0004a283
+fe029ee3
+fe5ff06f
+ff810113
+00112223
+00100593
+00050313
+02030263
+00058393
+fff30e13
+000e0863
+007585b3
+fffe0e13
+ff5ff06f
+fff30313
+fe1ff06f
+00412083
+00810113
+00008067
+
+
+
+
+
+NEW ONE:
+
+main:
+    addi s1, x0, 768      # Switch address (0x300)[cite: 1]
+    addi s2, x0, 512      # LED address (0x200)[cite: 1]
+    addi sp, x0, 500      # Initialize stack pointer[cite: 17]
+
+poll_input:
+    lw   a0, 0(s1)        # Read switch input[cite: 18, 19]
+    beq  a0, x0, poll_input # Wait for user to flip a switch
+
+    # Initialize factorial variables
+    addi a1, x0, 1        # Result = 1[cite: 13]
+    addi t1, a0, 0        # Counter = n[cite: 13]
+
+fact_loop:
+    # --- Efficiency Clause: If counter is 1 or 0, we are done ---
+    addi t4, x0, 1        # Load 1 for comparison[cite: 13]
+    beq  t1, t4, fact_done # Exit if n == 1 (saves time/memory)
+    beq  t1, x0, fact_done # Exit if n == 0[cite: 19]
+    
+    # Setup Multiplication (a1 = a1 * t1) via repeated addition
+    addi t2, a1, 0        # Save current running product[cite: 13]
+    addi t3, t1, -1       # Inner loop counter (add a1, n-1 times)[cite: 13]
+
+mult_loop:
+    beq  t3, x0, mult_done # If inner counter is 0, addition is complete[cite: 19]
+    add  a1, a1, t2       # a1 = a1 + original_a1[cite: 3, 4]
+    addi t3, t3, -1       # Decrement inner counter[cite: 13]
+    j    mult_loop        # Repeat addition[cite: 19]
+
+mult_done:
+    # --- Display Intermediate Result ---
+    sw   a1, 0(s2)        # Update LEDs with the new product[cite: 1, 12]
+    jal  ra, delay        # Wait so the user can see the value changing
+
+    addi t1, t1, -1       # Decrement outer factorial counter (n = n - 1)[cite: 13]
+    j    fact_loop        # Move to next multiplication step[cite: 19]
+
+fact_done:
+    sw   a1, 0(s2)        # Ensure final result is visible[cite: 1, 12]
+
+wait_for_reset:
+    lw   t0, 0(s1)        # Check switches[cite: 18, 19]
+    bne  t0, x0, wait_for_reset # Wait until switches are turned OFF[cite: 19]
+    j    poll_input       # Ready for next calculation[cite: 19]
+
+# --- Subroutine: Delay ---
+delay:
+    # Adjust this value based on your clock speed
+    # Higher value = longer pause between intermediate results
+    addi t5, x0, 4       
+delay_loop:
+    addi t5, t5, -1       # Decrement delay counter[cite: 13]
+    bne  t5, x0, delay_loop # Continue until 0[cite: 19]
+    jalr x0, 0(ra)        # Return to main[cite: 19]
+
+NEW MACHINE CODE:
+30000493
+20000913
+1f400113
+0004a503
+fe050ee3
+00100593
+00050313
+00100e93
+03d30863
+02030663
+00058393
+fff30e13
+000e0863
+007585b3
+fffe0e13
+ff5ff06f
+00b92023
+01c000ef
+fff30313
+fd1ff06f
+00b92023
+0004a283
+fe029ee3
+fb1ff06f
+00400f13
+ffff0f13
+fe0f1ee3
+00008067
+	

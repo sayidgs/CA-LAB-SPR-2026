@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Apr 30 04:57:44 2026
+# Process ID: 13756
+# Current directory: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2
+# Command line: wbtcv.exe -mode batch -source C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.hw/webtalk/labtool_webtalk.tcl -notrace Labs/Project/Processor/SCP/SCP.hw/webtalk/labtool_webtalk.log
+# Log file: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2/webtalk.log
+# Journal file: C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Lab11/Task2\webtalk.jou
+#-----------------------------------------------------------
+invalid command name "rdi::open_ppr_or_dcp"
+INFO: [Common 17-206] Exiting Webtalk at Thu Apr 30 04:57:44 2026...

@@ -1,0 +1,57 @@
+main:
+    addi s1, x0, 768    # Switch address
+    addi s2, x0, 512    # LED address
+    addi sp, x0, 500    # Set stack pointer
+poll_switches:
+    lw t0, 0(s1)        # Read switch values
+    #addi t0, t0, 4      # Add offset of 4
+    beq t0, x0, poll_switches
+    # Pass switch value to subroutine
+    addi a0, t0, 0
+    sw a0, 0(s2)        # initial value on LEDs
+    jal ra, start_timer # Jump to countdown logic
+    j poll_switches     # Repeat
+
+start_timer:
+    # Stack management
+    addi sp, sp, -16
+    sw ra, 12(sp)
+    sw s3, 8(sp)
+    addi s3, a0, 0
+
+run_decrement:
+    sw s3, 0(s2)        # Update LED output immediately
+    addi s3, s3, -1     # Decrement countdown value
+    bne s3, x0, run_decrement # Loop until zero
+
+exit_subroutine:
+    sw x0, 0(s2)        # Clear LEDs at the end
+    lw s3, 8(sp)        # Restore registers
+    lw ra, 12(sp)
+    addi sp, sp, 16     # Deallocate stack
+    jalr x0, 0(ra)      # Return to main
+
+
+MACHINE CODE:
+
+30000493
+20000913
+1f400113
+0004a283
+fe028ee3
+00028513
+00a92023
+008000ef
+fedff06f
+ff010113
+00112623
+01312423
+00050993
+01392023
+fff98993
+fe099ce3
+00092023
+00812983
+00c12083
+01010113
+00008067

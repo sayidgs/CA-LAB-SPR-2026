@@ -1,0 +1,98 @@
+module MainControl(
+    input [6:0] opcode,
+    output reg RegWrite,
+    output reg ALUSrc,
+    output reg MemRead,
+    output reg MemWrite,
+    output reg MemtoReg,
+    output reg Branch,
+    output reg Jump,
+    output reg [1:0] ALUOp
+);
+
+always @(*) begin
+    // Default safe values
+    RegWrite = 0;
+    ALUSrc   = 0;
+    MemRead  = 0;
+    MemWrite = 0;
+    MemtoReg = 0;
+    Branch   = 0;
+    Jump=0;
+    ALUOp    = 2'b00;
+
+    case(opcode)
+
+        // R-type (ADD, SUB, SLL, SRL, AND, OR, XOR)
+        7'b0110011: begin
+            RegWrite = 1;
+            ALUSrc   = 0;
+            ALUOp    = 2'b10;
+        end
+
+        // I-type (ADDI)
+        7'b0010011: begin
+            RegWrite = 1;
+            ALUSrc   = 1;
+            ALUOp    = 2'b10;
+        end
+
+        // Load (LW, LH, LB)
+        7'b0000011: begin
+            RegWrite = 1;
+            ALUSrc   = 1;
+            MemRead  = 1;
+            MemtoReg = 1;
+            ALUOp    = 2'b00;
+        end
+
+        // Store (SW, SH, SB)
+        7'b0100011: begin
+            ALUSrc   = 1;
+            MemWrite = 1;
+            ALUOp    = 2'b00;
+        end
+
+        // Branch (BEQ)
+        7'b1100011: begin
+            Branch = 1;
+            ALUOp  = 2'b01;
+        end
+        
+        // LUI
+        7'b0110111: begin
+            RegWrite = 1;
+            ALUSrc   = 1;
+            ALUOp    = 2'b11; // New op for "Pass Immediate"
+        end
+        
+        // JAL
+        7'b1101111: begin
+            RegWrite = 1;
+            Jump     = 1; // You'll need to add this wire/port
+            // ALUSrc and ALUOp don't matter much here, but keep them safe
+        end
+        
+        7'b1100111: begin // JALR
+            RegWrite = 1;
+            ALUSrc   = 1;
+            Jump     = 1;
+            ALUOp    = 2'b00; // ADD
+        end
+
+        default: begin
+            // Keep defaults (safe)
+            RegWrite = 0;
+            ALUSrc   = 0;
+            MemRead  = 0;
+            MemWrite = 0;
+            MemtoReg = 0;
+            Branch   = 0;
+            Jump=0;
+            ALUOp    = 2'b00;
+        end
+
+    endcase
+end
+
+endmodule
