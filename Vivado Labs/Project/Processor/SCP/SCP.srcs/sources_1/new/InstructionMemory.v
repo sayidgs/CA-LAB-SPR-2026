@@ -16,7 +16,7 @@
 //end
 
 //endmodule
-
+  
 module instructionMemory(
     input [7:0] instAddress,
     output reg [31:0] instruction

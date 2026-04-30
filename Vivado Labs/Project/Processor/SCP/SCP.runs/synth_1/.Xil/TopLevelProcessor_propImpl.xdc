@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/constrs_1/new/MainConst.xdc} rfile:../../../SCP.srcs/constrs_1/new/MainConst.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/constrs_1/new/MainConst.xdc} rfile:../../../SCP.srcs/constrs_1/new/MainConst.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports clk]
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]

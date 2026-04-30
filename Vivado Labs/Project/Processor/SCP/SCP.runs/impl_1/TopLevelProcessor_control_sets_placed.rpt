@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Thu Apr 30 04:39:41 2026
-| Host         : DESKTOP-1MEKRSF running 64-bit major release  (build 9200)
+| Date         : Thu Apr 30 13:01:58 2026
+| Host         : HU-DOPX-ML12 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file TopLevelProcessor_control_sets_placed.rpt
 | Design       : TopLevelProcessor
 | Device       : xc7a35t
@@ -73,42 +73,42 @@ Table of Contents
 +-----------------------+---------------------------------------+-----------------------------+------------------+----------------+--------------+
 |      Clock Signal     |             Enable Signal             |       Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
 +-----------------------+---------------------------------------+-----------------------------+------------------+----------------+--------------+
-|  counter_reg_BUFG[26] | PC_reg/SwitchReadEnable               | db_reset/AR[0]              |                8 |             16 |         2.00 |
 |  counter_reg_BUFG[26] | PC_reg/memory_reg_0_255_0_0_i_15_0[0] | db_reset/AR[0]              |                5 |             16 |         3.20 |
+|  counter_reg_BUFG[26] | PC_reg/SwitchReadEnable               | db_reset/AR[0]              |                8 |             16 |         2.00 |
 |  clk_IBUF_BUFG        |                                       | db_reset/counter[0]_i_1_n_0 |                5 |             20 |         4.00 |
 |  clk_IBUF_BUFG        |                                       |                             |                8 |             31 |         3.88 |
 |  counter_reg_BUFG[26] |                                       | db_reset/AR[0]              |               17 |             32 |         1.88 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_7[0]             | db_reset/AR[0]              |               15 |             32 |         2.13 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_13[0]            | db_reset/AR[0]              |               14 |             32 |         2.29 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_22[0]            | db_reset/AR[0]              |               18 |             32 |         1.78 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_26[0]            | db_reset/AR[0]              |               12 |             32 |         2.67 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_28[0]            | db_reset/AR[0]              |               19 |             32 |         1.68 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_29[0]            | db_reset/AR[0]              |               13 |             32 |         2.46 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_5[0]             | db_reset/AR[0]              |               16 |             32 |         2.00 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_27[0]            | db_reset/AR[0]              |               12 |             32 |         2.67 |
 |  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_8[0]             | db_reset/AR[0]              |               11 |             32 |         2.91 |
 |  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_9[0]             | db_reset/AR[0]              |               13 |             32 |         2.46 |
 |  counter_reg_BUFG[26] | PC_reg/E[0]                           | db_reset/AR[0]              |               12 |             32 |         2.67 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_16[0]            | db_reset/AR[0]              |               16 |             32 |         2.00 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_19[0]            | db_reset/AR[0]              |               12 |             32 |         2.67 |
 |  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_0[0]             | db_reset/AR[0]              |               15 |             32 |         2.13 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_1[0]             | db_reset/AR[0]              |               14 |             32 |         2.29 |
 |  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_10[0]            | db_reset/AR[0]              |               11 |             32 |         2.91 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_11[0]            | db_reset/AR[0]              |               12 |             32 |         2.67 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_14[0]            | db_reset/AR[0]              |               20 |             32 |         1.60 |
 |  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_15[0]            | db_reset/AR[0]              |               13 |             32 |         2.46 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_16[0]            | db_reset/AR[0]              |               16 |             32 |         2.00 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_17[0]            | db_reset/AR[0]              |               15 |             32 |         2.13 |
 |  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_18[0]            | db_reset/AR[0]              |               17 |             32 |         1.88 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_19[0]            | db_reset/AR[0]              |               12 |             32 |         2.67 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_2[0]             | db_reset/AR[0]              |               14 |             32 |         2.29 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_20[0]            | db_reset/AR[0]              |               12 |             32 |         2.67 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_21[0]            | db_reset/AR[0]              |               13 |             32 |         2.46 |
 |  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_23[0]            | db_reset/AR[0]              |               14 |             32 |         2.29 |
 |  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_24[0]            | db_reset/AR[0]              |               15 |             32 |         2.13 |
 |  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_25[0]            | db_reset/AR[0]              |               15 |             32 |         2.13 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_27[0]            | db_reset/AR[0]              |               12 |             32 |         2.67 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_28[0]            | db_reset/AR[0]              |               19 |             32 |         1.68 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_3[0]             | db_reset/AR[0]              |               23 |             32 |         1.39 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_11[0]            | db_reset/AR[0]              |               12 |             32 |         2.67 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_17[0]            | db_reset/AR[0]              |               15 |             32 |         2.13 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_20[0]            | db_reset/AR[0]              |               12 |             32 |         2.67 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_4[0]             | db_reset/AR[0]              |               13 |             32 |         2.46 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_1[0]             | db_reset/AR[0]              |               14 |             32 |         2.29 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_2[0]             | db_reset/AR[0]              |               14 |             32 |         2.29 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_22[0]            | db_reset/AR[0]              |               18 |             32 |         1.78 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_14[0]            | db_reset/AR[0]              |               20 |             32 |         1.60 |
 |  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_12[0]            | db_reset/AR[0]              |               21 |             32 |         1.52 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_21[0]            | db_reset/AR[0]              |               13 |             32 |         2.46 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_5[0]             | db_reset/AR[0]              |               16 |             32 |         2.00 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_13[0]            | db_reset/AR[0]              |               14 |             32 |         2.29 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_29[0]            | db_reset/AR[0]              |               13 |             32 |         2.46 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_3[0]             | db_reset/AR[0]              |               23 |             32 |         1.39 |
 |  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_6[0]             | db_reset/AR[0]              |               16 |             32 |         2.00 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_7[0]             | db_reset/AR[0]              |               15 |             32 |         2.13 |
-|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_26[0]            | db_reset/AR[0]              |               12 |             32 |         2.67 |
+|  counter_reg_BUFG[26] | PC_reg/PC_out_reg[2]_4[0]             | db_reset/AR[0]              |               13 |             32 |         2.46 |
 |  counter_reg_BUFG[26] | PC_reg/memory_reg_0_255_0_0_i_16_0    |                             |               32 |            128 |         4.00 |
 |  counter_reg_BUFG[26] | PC_reg/memory_reg_0_255_0_0_i_16_1    |                             |               32 |            128 |         4.00 |
 +-----------------------+---------------------------------------+-----------------------------+------------------+----------------+--------------+

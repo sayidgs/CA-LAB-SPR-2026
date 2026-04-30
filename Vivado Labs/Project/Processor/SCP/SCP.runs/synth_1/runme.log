@@ -17,97 +17,97 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 19328
-WARNING: [Synth 8-6901] identifier 'instruction' is used before its declaration [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/TopSCP.v:244]
+INFO: [Synth 8-7075] Helper process launched with PID 23400
+WARNING: [Synth 8-6901] identifier 'instruction' is used before its declaration [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/TopSCP.v:244]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1025.059 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1024.898 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'TopLevelProcessor' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/TopSCP.v:231]
-INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/Debouncer.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'debouncer' (1#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/Debouncer.v:1]
-INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/PC.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (2#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/PC.v:1]
-INFO: [Synth 8-6157] synthesizing module 'pcAdder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/pcAdder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'pcAdder' (3#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/pcAdder.v:1]
-INFO: [Synth 8-6157] synthesizing module 'instructionMemory' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/InstructionMemory.v:20]
-INFO: [Synth 8-3876] $readmem data file 'program.mem' is read successfully [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/InstructionMemory.v:29]
-INFO: [Synth 8-6155] done synthesizing module 'instructionMemory' (4#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/InstructionMemory.v:20]
-INFO: [Synth 8-6157] synthesizing module 'MainControl' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/MainControl.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'MainControl' (5#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/MainControl.v:1]
-INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/RegisterFile.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (6#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/RegisterFile.v:1]
-INFO: [Synth 8-6157] synthesizing module 'immGen' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ImmGen.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'immGen' (7#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ImmGen.v:1]
-INFO: [Synth 8-6157] synthesizing module 'ALUControl' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ALUControl.v:1]
-INFO: [Synth 8-226] default block is never used [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ALUControl.v:44]
-INFO: [Synth 8-6155] done synthesizing module 'ALUControl' (8#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ALUControl.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/MUX.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mux2' (9#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/MUX.v:1]
-INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ALU32bit.v:60]
-INFO: [Synth 8-6157] synthesizing module 'ALU_1bit' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ALU1bit.v:1]
-INFO: [Synth 8-6157] synthesizing module 'full_adder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/FullAdder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'full_adder' (10#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/FullAdder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'ALU_1bit' (11#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ALU1bit.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (12#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ALU32bit.v:60]
-INFO: [Synth 8-6157] synthesizing module 'branchAdder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/BranchAdder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'branchAdder' (13#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/BranchAdder.v:1]
-INFO: [Synth 8-6157] synthesizing module 'addressDecoderTop' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ADTop.v:1]
-INFO: [Synth 8-6157] synthesizing module 'AddressDecoder' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/AddressDecoder.v:69]
-INFO: [Synth 8-6155] done synthesizing module 'AddressDecoder' (14#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/AddressDecoder.v:69]
-INFO: [Synth 8-6157] synthesizing module 'DataMemory' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/DataMemory.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (15#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/DataMemory.v:1]
-INFO: [Synth 8-6157] synthesizing module 'led_driver' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/LedDriver.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'led_driver' (16#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/LedDriver.v:1]
-INFO: [Synth 8-6157] synthesizing module 'switch_reader' [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/SwitchReader.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'switch_reader' (17#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/SwitchReader.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'addressDecoderTop' (18#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ADTop.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'TopLevelProcessor' (19#1) [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/TopSCP.v:231]
+INFO: [Synth 8-6157] synthesizing module 'TopLevelProcessor' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/TopSCP.v:231]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/Debouncer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (1#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/Debouncer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/PC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (2#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/PC.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pcAdder' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/pcAdder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pcAdder' (3#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/pcAdder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'instructionMemory' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/InstructionMemory.v:20]
+INFO: [Synth 8-3876] $readmem data file 'program.mem' is read successfully [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/InstructionMemory.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'instructionMemory' (4#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/InstructionMemory.v:20]
+INFO: [Synth 8-6157] synthesizing module 'MainControl' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/MainControl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MainControl' (5#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/MainControl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/RegisterFile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (6#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/RegisterFile.v:1]
+INFO: [Synth 8-6157] synthesizing module 'immGen' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ImmGen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'immGen' (7#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ImmGen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALUControl' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ALUControl.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ALUControl.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'ALUControl' (8#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ALUControl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/MUX.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (9#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/MUX.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ALU32bit.v:60]
+INFO: [Synth 8-6157] synthesizing module 'ALU_1bit' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ALU1bit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'full_adder' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/FullAdder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'full_adder' (10#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/FullAdder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_1bit' (11#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ALU1bit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (12#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ALU32bit.v:60]
+INFO: [Synth 8-6157] synthesizing module 'branchAdder' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/BranchAdder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'branchAdder' (13#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/BranchAdder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'addressDecoderTop' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ADTop.v:1]
+INFO: [Synth 8-6157] synthesizing module 'AddressDecoder' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/AddressDecoder.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'AddressDecoder' (14#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/AddressDecoder.v:69]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/DataMemory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (15#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/DataMemory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'led_driver' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/LedDriver.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'led_driver' (16#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/LedDriver.v:1]
+INFO: [Synth 8-6157] synthesizing module 'switch_reader' [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/SwitchReader.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'switch_reader' (17#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/SwitchReader.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'addressDecoderTop' (18#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/ADTop.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevelProcessor' (19#1) [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/sources_1/new/TopSCP.v:231]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1025.059 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1024.898 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1025.059 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1024.898 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1025.059 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1024.898 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1025.059 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1024.898 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/constrs_1/new/MainConst.xdc]
-Finished Parsing XDC File [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/constrs_1/new/MainConst.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/constrs_1/new/MainConst.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TopLevelProcessor_propImpl.xdc].
+Parsing XDC File [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/constrs_1/new/MainConst.xdc]
+Finished Parsing XDC File [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/constrs_1/new/MainConst.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.srcs/constrs_1/new/MainConst.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TopLevelProcessor_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/TopLevelProcessor_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1043.074 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1041.258 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1043.074 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1041.258 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1043.074 ; gain = 18.016
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1041.258 ; gain = 16.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1043.074 ; gain = 18.016
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1041.258 ; gain = 16.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1043.074 ; gain = 18.016
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1041.258 ; gain = 16.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1043.074 ; gain = 18.016
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1041.258 ; gain = 16.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -149,7 +149,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:01:39 . Memory (MB): peak = 1043.074 ; gain = 18.016
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1041.258 ; gain = 16.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -179,13 +179,13 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:49 ; elapsed = 00:01:50 . Memory (MB): peak = 1043.074 ; gain = 18.016
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1041.258 ; gain = 16.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:08 ; elapsed = 00:02:09 . Memory (MB): peak = 1049.289 ; gain = 24.230
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1049.324 ; gain = 24.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -205,7 +205,7 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:14 ; elapsed = 00:02:16 . Memory (MB): peak = 1085.184 ; gain = 60.125
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1085.324 ; gain = 60.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -223,37 +223,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:20 ; elapsed = 00:02:21 . Memory (MB): peak = 1090.543 ; gain = 65.484
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1091.680 ; gain = 66.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:20 ; elapsed = 00:02:21 . Memory (MB): peak = 1090.543 ; gain = 65.484
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1091.680 ; gain = 66.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:20 ; elapsed = 00:02:22 . Memory (MB): peak = 1090.543 ; gain = 65.484
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1091.680 ; gain = 66.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:20 ; elapsed = 00:02:22 . Memory (MB): peak = 1090.543 ; gain = 65.484
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1091.680 ; gain = 66.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:20 ; elapsed = 00:02:22 . Memory (MB): peak = 1090.543 ; gain = 65.484
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1091.680 ; gain = 66.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:20 ; elapsed = 00:02:22 . Memory (MB): peak = 1090.543 ; gain = 65.484
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1091.680 ; gain = 66.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -285,18 +285,18 @@ Report Cell Usage:
 |14    |OBUF      |    16|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:20 ; elapsed = 00:02:22 . Memory (MB): peak = 1090.543 ; gain = 65.484
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1091.680 ; gain = 66.781
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:10 ; elapsed = 00:02:18 . Memory (MB): peak = 1090.543 ; gain = 47.469
-Synthesis Optimization Complete : Time (s): cpu = 00:02:21 ; elapsed = 00:02:22 . Memory (MB): peak = 1090.543 ; gain = 65.484
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 1091.680 ; gain = 50.422
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1091.680 ; gain = 66.781
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1100.062 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1091.680 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 352 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1100.062 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1091.680 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 64 instances were transformed.
   RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 64 instances
@@ -304,7 +304,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 55 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:29 ; elapsed = 00:02:32 . Memory (MB): peak = 1100.062 ; gain = 75.004
-INFO: [Common 17-1381] The checkpoint 'C:/Users/ghazi/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.runs/synth_1/TopLevelProcessor.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 1091.680 ; gain = 66.781
+INFO: [Common 17-1381] The checkpoint 'C:/Users/gs10403/CA-LAB-SPR-2026/Vivado Labs/Project/Processor/SCP/SCP.runs/synth_1/TopLevelProcessor.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file TopLevelProcessor_utilization_synth.rpt -pb TopLevelProcessor_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 30 04:38:35 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 30 13:01:27 2026...

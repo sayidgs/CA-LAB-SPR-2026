@@ -1,3 +1,5 @@
+TASK A:
+
 main:
     addi s1, x0, 768    # Switch address
     addi s2, x0, 512    # LED address
